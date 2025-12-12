@@ -1,0 +1,1675 @@
+[
+  {
+    "Key": "DISINFO_GEN",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation broadly",
+    "Actors": {
+      "Citizens": {
+        "Key":"C_DISINFO_GEN",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key":"I_DISINFO_GEN",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key":"P_DISINFO_GEN",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MALINFO_GEN",
+    "Group": "MALINFO",
+    "Description": "Penalizes malinformation broadly",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MALINFO_GEN",
+        "ADICO": "[Citizens][may not][exercise (or automate) malinformation][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MALINFO_GEN",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of malinformation][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MALINFO_GEN",
+        "ADICO": "[Press][may not][exercise (or automate) malinformation][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_GEN",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation broadly",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_GEN",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_GEN",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_GEN",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+    {
+    "Key": "DISINFO_HATE",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that is hate speech or discriminatory",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_HATE",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that is hate speech or discriminatory][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_HATE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that is hate speech or discriminatory][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_HATE",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that is hate speech or discriminatory][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_HEALTHOFF",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens legitimacy of public health officials",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_HEALTHOFF",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens legitimacy of public health officials][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_HEALTHOFF",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens legitimacy of public health officials][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_HEALTHOFF",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens legitimacy of public health officials][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_LIFE",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens others' health or life",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_LIFE",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens others' health or life][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_LIFE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens others' health or life][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_LIFE",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens others' health or life][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_MORAL",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens public morals w/o using obscene material",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_MORAL",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens public morals w/o using obscene material][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_MORAL",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens public morals w/o using obscene material][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_MORAL",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens public morals w/o using obscene material][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_NATSEC",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens national security",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_NATSEC",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens national security][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_NATSEC",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens national security][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_NATSEC",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens national security][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_ORDER",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens public order/safety",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_ORDER",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens public order/safety][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_ORDER",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens public order/safety][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_ORDER",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens public order/safety][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_PROPERTY",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens others' property or privacy",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_PROPERTY",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens others' property or privacy][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_PROPERTY",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens others' property or privacy][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_PROPERTY",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens others' property or privacy][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_PUBHEALTH",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens public health",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_PUBHEALTH",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens public health][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_PUBHEALTH",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens public health][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_PUBHEALTH",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens public health][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_REPUTATION",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens others' reputations i.e. libel, slander, defamation",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_REPUTATION",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens others' reputations i.e. libel, slander, defamation][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_REPUTATION",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens others' reputations i.e. libel, slander, defamation][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_REPUTATION",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens others' reputations i.e. libel, slander, defamation][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_RIGHTS",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens the rights of others",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_RIGHTS",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens the rights of others][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_RIGHTS",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens the rights of others][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_RIGHTS",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens the rights of others][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+    {
+    "Key": "EXPRESS_CLASSIFIED",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that reveals classified information",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_CLASSIFIED",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that reveals classified information][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_CLASSIFIED",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that reveals classified information][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_CLASSIFIED",
+        "ADICO": "[Press][may not][exercise (or automate) expression that reveals classified information][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_HATE",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that is hate speech or discriminatory",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_HATE",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that is hate speech or discriminatory][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_HATE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that is hate speech or discriminatory][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_HATE",
+        "ADICO": "[Press][may not][exercise (or automate) expression that is hate speech or discriminatory][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_HEALTHOFF",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens legitimacy of public health officials",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_HEALTHOFF",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens legitimacy of public health officials][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_HEALTHOFF",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens legitimacy of public health officials][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_HEALTHOFF",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens legitimacy of public health officials][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_LIFE",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens others' health or life",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_LIFE",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens others' health or life][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_LIFE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens others' health or life][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_LIFE",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens others' health or life][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_MORAL",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens public morals w/o using obscene material",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_MORAL",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens public morals w/o using obscene material][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_MORAL",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens public morals w/o using obscene material][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_MORAL",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens public morals w/o using obscene material][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_NATSEC",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens national security",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_NATSEC",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens national security][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_NATSEC",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens national security][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_NATSEC",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens national security][AATAUAC][or else institutional sanction]"
+      },
+      "Government officials": {
+        "Key": "C_EXPRESS_NATSEC_GOVOFF",
+        "ADICO": "[Government officials][may not][exercise (or automate) expression that threatens national security][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_OBSCENE",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens public morals using obscene material (eg pornography, graphic violence)",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_OBSCENE",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens public morals using obscene material (eg pornography, graphic violence)][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_OBSCENE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens public morals using obscene material (eg pornography, graphic violence)][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_OBSCENE",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens public morals using obscene material (eg pornography, graphic violence)][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_ORDER",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens public order/safety",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_ORDER",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens public order/safety][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_ORDER",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens public order/safety][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_ORDER",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens public order/safety][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_PROPERTY",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens others' property or privacy",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_PROPERTY",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens others' property or privacy][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_PROPERTY",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens others' property or privacy][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_PROPERTY",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens others' property or privacy][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_PUBHEALTH",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens public health",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_PUBHEALTH",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens public health][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_PUBHEALTH",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens public health][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_PUBHEALTH",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens public health][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_RELIGION",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens other's or national religion",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_RELIGION",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens other's or national religion][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_RELIGION",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens other's or national religion][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_RELIGION",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens other's or national religion][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_REPUTATION",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens others' reputations i.e. libel, slander, defamation",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_REPUTATION",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens others' reputations i.e. libel, slander, defamation][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_REPUTATION",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens others' reputations i.e. libel, slander, defamation][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_REPUTATION",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens others' reputations i.e. libel, slander, defamation][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_RIGHTS",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens the rights of others",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_RIGHTS",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens the rights of others][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_RIGHTS",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens the rights of others][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_RIGHTS",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens the rights of others][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_HATE",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that is hate speech or discriminatory",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_HATE",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that is hate speech or discriminatory][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_HATE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that is hate speech or discriminatory][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_HATE",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that is hate speech or discriminatory][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_HEALTHOFF",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens legitimacy of public health officials",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_HEALTHOFF",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens legitimacy of public health officials][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_HEALTHOFF",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens legitimacy of public health officials][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_HEALTHOFF",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens legitimacy of public health officials][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_LIFE",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens others' health or life",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_LIFE",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens others' health or life][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_LIFE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens others' health or life][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_LIFE",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens others' health or life][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_MORAL",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens public morals w/o using obscene material",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_MORAL",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens public morals w/o using obscene material][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_MORAL",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens public morals w/o using obscene material][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_MORAL",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens public morals w/o using obscene material][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_NATSEC",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens national security",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_NATSEC",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens national security][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_NATSEC",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens national security][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_NATSEC",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens national security][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_ORDER",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens public order/safety",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_ORDER",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens public order/safety][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_ORDER",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens public order/safety][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_ORDER",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens public order/safety][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_PROPERTY",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens others' property or privacy",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_PROPERTY",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens others' property or privacy][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_PROPERTY",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens others' property or privacy][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_PROPERTY",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens others' property or privacy][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_PUBHEALTH",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens public health",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_PUBHEALTH",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens public health][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_PUBHEALTH",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens public health][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_PUBHEALTH",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens public health][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_REPUTATION",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens others' reputations i.e. libel, slander, defamation",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_REPUTATION",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens others' reputations i.e. libel, slander, defamation][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_REPUTATION",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens others' reputations i.e. libel, slander, defamation][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_REPUTATION",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens others' reputations i.e. libel, slander, defamation][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_RIGHTS",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens the rights of others",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_RIGHTS",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens the rights of others][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_RIGHTS",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens the rights of others][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_RIGHTS",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens the rights of others][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_CONFIDENCE",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that reduces public confidence in government",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_CONFIDENCE",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that reduces public confidence in government][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_CONFIDENCE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that reduces public confidence in government][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_CONFIDENCE",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that reduces public confidence in government][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_ECON",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens economic affairs",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_ECON",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens economic affairs][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_ECON",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens economic affairs][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_ECON",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens economic affairs][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_ELECTION",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that harms election integrity",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_ELECTION",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that harms election integrity][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_ELECTION",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that harms election integrity][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_ELECTION",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that harms election integrity][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_GOVAFFAIRS",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens government affairs",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_GOVAFFAIRS",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens government affairs][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_GOVAFFAIRS",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens government affairs][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_GOVAFFAIRS",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens government affairs][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_GOVCRITIC",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that criticizes government, laws, or officials",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_GOVCRITIC",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that criticizes government, laws, or officials][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_GOVCRITIC",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that criticizes government, laws, or officials][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_GOVCRITIC",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that criticizes government, laws, or officials][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_GOVLEGIT",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens government legitimacy",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_GOVLEGIT",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens government legitimacy][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_GOVLEGIT",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens government legitimacy][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_GOVLEGIT",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens government legitimacy][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_HISTORY",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that harms national history, values, or tradition",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_HISTORY",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that harms national history, values, or tradition][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_HISTORY",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that harms national history, values, or tradition][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_HISTORY",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that harms national history, values, or tradition][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_INFRA",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens infrastructure",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_INFRA",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens infrastructure][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_INFRA",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens infrastructure][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_INFRA",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens infrastructure][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_IR",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that harms international relations",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_IR",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that harms international relations][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_IR",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that harms international relations][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_IR",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that harms international relations][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_NATINT",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that threatens public/national interest",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_NATINT",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that threatens public/national interest][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_NATINT",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that threatens public/national interest][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_NATINT",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that threatens public/national interest][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_NATREP",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that harms national reputation/honor",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_NATREP",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that harms national reputation/honor][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_NATREP",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that harms national reputation/honor][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_NATREP",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that harms national reputation/honor][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_STATEOP",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that hinders state operations",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_STATEOP",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that hinders state operations][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_STATEOP",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that hinders state operations][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_STATEOP",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that hinders state operations][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "DISINFO_UNITY",
+    "Group": "DISINFO",
+    "Description": "Penalizes disinformation that undermines national solidarity/unity",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_DISINFO_UNITY",
+        "ADICO": "[Citizens][may not][exercise (or automate) disinformation that undermines national solidarity/unity][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_DISINFO_UNITY",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of disinformation that undermines national solidarity/unity][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_DISINFO_UNITY",
+        "ADICO": "[Press][may not][exercise (or automate) disinformation that undermines national solidarity/unity][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+
+  {
+    "Key": "EXPRESS_CONFIDENCE",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that reduces public confidence in government",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_CONFIDENCE",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that reduces public confidence in government][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_CONFIDENCE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that reduces public confidence in government][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_CONFIDENCE",
+        "ADICO": "[Press][may not][exercise (or automate) expression that reduces public confidence in government][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_ECON",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens economic affairs",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_ECON",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens economic affairs][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_ECON",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens economic affairs][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_ECON",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens economic affairs][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_ELECTION",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that harms election integrity",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_ELECTION",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that harms election integrity][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_ELECTION",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that harms election integrity][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_ELECTION",
+        "ADICO": "[Press][may not][exercise (or automate) expression that harms election integrity][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_GOVAFFAIRS",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens government affairs",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_GOVAFFAIRS",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens government affairs][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_GOVAFFAIRS",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens government affairs][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_GOVAFFAIRS",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens government affairs][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_GOVCRITIC",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that criticizes government, laws, or officials",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_GOVCRITIC",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that criticizes government, laws, or officials][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_GOVCRITIC",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that criticizes government, laws, or officials][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_GOVCRITIC",
+        "ADICO": "[Press][may not][exercise (or automate) expression that criticizes government, laws, or officials][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_GOVLEGIT",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens government legitimacy",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_GOVLEGIT",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens government legitimacy][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_GOVLEGIT",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens government legitimacy][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_GOVLEGIT",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens government legitimacy][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_HISTORY",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that harms national history, values, or tradition",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_HISTORY",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that harms national history, values, or tradition][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_HISTORY",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that harms national history, values, or tradition][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_HISTORY",
+        "ADICO": "[Press][may not][exercise (or automate) expression that harms national history, values, or tradition][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_INFRA",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens infrastructure",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_INFRA",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens infrastructure][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_INFRA",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens infrastructure][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_INFRA",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens infrastructure][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_IR",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that harms international relations",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_IR",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that harms international relations][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_IR",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that harms international relations][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_IR",
+        "ADICO": "[Press][may not][exercise (or automate) expression that harms international relations][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_NATINT",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that threatens public/national interest",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_NATINT",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that threatens public/national interest][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_NATINT",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that threatens public/national interest][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_NATINT",
+        "ADICO": "[Press][may not][exercise (or automate) expression that threatens public/national interest][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_NATREP",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that harms national reputation/honor",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_NATREP",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that harms national reputation/honor][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_NATREP",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that harms national reputation/honor][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_NATREP",
+        "ADICO": "[Press][may not][exercise (or automate) expression that harms national reputation/honor][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_STATEOP",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that hinders state operations",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_STATEOP",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that hinders state operations][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_STATEOP",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that hinders state operations][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_STATEOP",
+        "ADICO": "[Press][may not][exercise (or automate) expression that hinders state operations][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXPRESS_UNITY",
+    "Group": "EXPRESS",
+    "Description": "Penalizes expression that undermines national solidarity/unity",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_EXPRESS_UNITY",
+        "ADICO": "[Citizens][may not][exercise (or automate) expression that undermines national solidarity/unity][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_EXPRESS_UNITY",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of expression that undermines national solidarity/unity][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_EXPRESS_UNITY",
+        "ADICO": "[Press][may not][exercise (or automate) expression that undermines national solidarity/unity][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+
+  {
+    "Key": "MISINFO_CONFIDENCE",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that reduces public confidence in government",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_CONFIDENCE",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that reduces public confidence in government][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_CONFIDENCE",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that reduces public confidence in government][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_CONFIDENCE",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that reduces public confidence in government][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_ECON",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens economic affairs",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_ECON",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens economic affairs][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_ECON",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens economic affairs][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_ECON",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens economic affairs][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_ELECTION",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that harms election integrity",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_ELECTION",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that harms election integrity][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_ELECTION",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that harms election integrity][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_ELECTION",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that harms election integrity][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_GOVAFFAIRS",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens government affairs",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_GOVAFFAIRS",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens government affairs][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_GOVAFFAIRS",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens government affairs][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_GOVAFFAIRS",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens government affairs][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_GOVCRITIC",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that criticizes government, laws, or officials",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_GOVCRITIC",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that criticizes government, laws, or officials][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_GOVCRITIC",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that criticizes government, laws, or officials][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_GOVCRITIC",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that criticizes government, laws, or officials][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_GOVLEGIT",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens government legitimacy",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_GOVLEGIT",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens government legitimacy][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_GOVLEGIT",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens government legitimacy][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_GOVLEGIT",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens government legitimacy][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_HISTORY",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that harms national history, values, or tradition",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_HISTORY",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that harms national history, values, or tradition][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_HISTORY",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that harms national history, values, or tradition][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_HISTORY",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that harms national history, values, or tradition][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_INFRA",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens infrastructure",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_INFRA",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens infrastructure][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_INFRA",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens infrastructure][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_INFRA",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens infrastructure][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_IR",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that harms international relations",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_IR",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that harms international relations][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_IR",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that harms international relations][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_IR",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that harms international relations][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_NATINT",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that threatens public/national interest",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_NATINT",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that threatens public/national interest][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_NATINT",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that threatens public/national interest][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_NATINT",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that threatens public/national interest][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_NATREP",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that harms national reputation/honor",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_NATREP",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that harms national reputation/honor][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_NATREP",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that harms national reputation/honor][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_NATREP",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that harms national reputation/honor][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_STATEOP",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that hinders state operations",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_STATEOP",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that hinders state operations][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_STATEOP",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that hinders state operations][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_STATEOP",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that hinders state operations][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "MISINFO_UNITY",
+    "Group": "MISINFO",
+    "Description": "Penalizes misinformation that undermines national solidarity/unity",
+    "Actors": {
+      "Citizens": {
+        "Key": "C_MISINFO_UNITY",
+        "ADICO": "[Citizens][may not][exercise (or automate) misinformation that undermines national solidarity/unity][AATAUAC][or else institutional sanction]"
+      },
+      "IS and SM providers": {
+        "Key": "I_MISINFO_UNITY",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of misinformation that undermines national solidarity/unity][AATAUAC][or else institutional sanction]"
+      },
+      "Press": {
+        "Key": "P_MISINFO_UNITY",
+        "ADICO": "[Press][may not][exercise (or automate) misinformation that undermines national solidarity/unity][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "GOV_CENSOR",
+    "Group": "GOVERNANCE",
+    "Description": "Allows the government to censor certain expression",
+    "Actors": {
+      "Government": {
+        "Key": "GOV_CENSOR",
+        "ADICO": "[Government][may][censor certain expression][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "GOV_NOWARRANT",
+    "Group": "GOVERNANCE",
+    "Description": "Allows search and seizure of private property without reasonable cause",
+    "Actors": {
+      "Government": {
+        "Key": "GOV_NOWARRANT",
+        "ADICO": "[Government][may][search and seize private property without reasonable cause][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "GOV_OVERSIGHT",
+    "Group": "GOVERNANCE",
+    "Description": "Creates oversight body",
+    "Actors": {
+      "Government": {
+        "Key": "GOV_OVERSIGHT",
+        "ADICO": "[Government][must][create oversight body][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "GOV_REGULATOR",
+    "Group": "GOVERNANCE",
+    "Description": "Creates new agency/regulatory body",
+    "Actors": {
+      "Government": {
+        "Key": "GOV_REGULATOR",
+        "ADICO": "[Government][must][create new and independent regulator to enforce the law][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "GOV_WARRANT",
+    "Group": "GOVERNANCE",
+    "Description": "Allows search and seizure of private property with warrant",
+    "Actors": {
+      "Government": {
+        "Key": "GOV_WARRANT",
+        "ADICO": "[Government][may][search and seize private property with warrant][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "REG_RULES",
+    "Group": "GOVERNANCE",
+    "Description": "Allows creation of regulatory rules in support of a law",
+    "Actors": {
+      "Regulator": {
+        "Key": "REG_RULES",
+        "ADICO": "[Regulator][may][enact regulatory rules to adapt to changes in technology and disinformation strategies][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "IM_DATA",
+    "Group": "OPERATIONS",
+    "Description": "IS and SM providers must accept data transparency requirements",
+    "Actors": {
+      "IS and SM providers": {
+        "Key": "IM_DATA",
+        "ADICO": "[IS and SM providers][must][accept data transparency requirements][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "IM_DEPLATFORM",
+    "Group": "OPERATIONS",
+    "Description": "IS and SM providers deplatforming accounts",
+    "Actors": {
+      "IS and SM providers": {
+        "Key": "IM_DEPLATFORM",
+        "ADICO": "[IS and SM providers][must][deplatform accounts that violate criteria stipulated in the law][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "IM_FUNDING",
+    "Group": "OPERATIONS",
+    "Description": "IS and SM providers must disclose funding and/or accept financial regulations",
+    "Actors": {
+      "IS and SM providers": {
+        "Key": "IM_FUNDING",
+        "ADICO": "[IS and SM providers][must][disclose funding and/or accept financial regulations][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "IM_LICENSE",
+    "Group": "OPERATIONS",
+    "Description": "Licensing IS and SM providers",
+    "Actors": {
+      "IS and SM providers": {
+        "Key": "IM_LICENSE",
+        "ADICO": "[IS and SM providers][must][obtain operational license in addition to formal registration before it can operate][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "IM_OVERSIGHT",
+    "Group": "OPERATIONS",
+    "Description": "IS and SM provider oversight",
+    "Actors": {
+      "IS and SM providers": {
+        "Key": "IM_OVERSIGHT",
+        "ADICO": "[IS and SM providers][must][register and accept oversight from the government][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "IM_PREVENTION",
+    "Group": "OPERATIONS",
+    "Description": "Suppressing/prevent dissemination of certain types of expression through its platform",
+    "Actors": {
+      "IS and SM providers": {
+        "Key": "IM_PREVENTION",
+        "ADICO": "[IS and SM providers][must][suppress/prevent dissemination of certain types of expression through its platform][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "IM_REPORT",
+    "Group": "OPERATIONS",
+    "Description": "IS and SM providers reporting information",
+    "Actors": {
+      "IS and SM providers": {
+        "Key": "IM_REPORT",
+        "ADICO": "[IS and SM providers][must][report certain information to the government][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "PRESS_FUNDING",
+    "Group": "OPERATIONS",
+    "Description": "Press must disclose funding and/or accept financial regulations",
+    "Actors": {
+      "Press": {
+        "Key": "PRESS_FUNDING",
+        "ADICO": "[Press][must][disclose funding and/or accept financial regulations][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "PRESS_LICENSE",
+    "Group": "OPERATIONS",
+    "Description": "Licensing press",
+    "Actors": {
+      "Press": {
+        "Key": "PRESS_LICENSE",
+        "ADICO": "[Press][must][obtain operational license in addition to formal registration before it can operate][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "PRESS_OVERSIGHT",
+    "Group": "OPERATIONS",
+    "Description": "Press oversight",
+    "Actors": {
+      "Press": {
+        "Key": "PRESS_OVERSIGHT",
+        "ADICO": "[Press][must][register and accept oversight from the government][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "PRESS_REPORT",
+    "Group": "OPERATIONS",
+    "Description": "Press must report information",
+    "Actors": {
+      "Press": {
+        "Key": "PRESS_REPORT",
+        "ADICO": "[Press][must][report certain information to the government][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "APPEAL_NONREG",
+    "Group": "LEGAL",
+    "Description": "Citizens may appeal to non-regulator",
+    "Actors": {
+      "Citizens": {
+        "Key": "APPEAL_NONREG",
+        "ADICO": "[Citizens][may][appeal to non-regulating body if they feel that the ruling was incorrect][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "APPEAL_REG",
+    "Group": "LEGAL",
+    "Description": "Citizens may appeal within regulator",
+    "Actors": {
+      "Citizens": {
+        "Key": "APPEAL_REG",
+        "ADICO": "[Citizens][may][appeal within regulator if they feel that the ruling was incorrect][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXEMPTION_LEG",
+    "Group": "LEGAL",
+    "Description": "Expression protected under [type of exemption]",
+    "Actors": {
+      "Government": {
+        "Key": "EXEMPTION_LEG",
+        "ADICO": "[Government][may not][regulate certain type of expression if it is protected within the legislation][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "EXEMPTION_SEPLEG",
+    "Group": "LEGAL",
+    "Description": "Expression protected under [legislation]",
+    "Actors": {
+      "Government": {
+        "Key": "EXEMPTION_SEPLEG",
+        "ADICO": "[Government][may not][regulate certain type of expression if it is protected via separate legislation][AATAUAC][or else institutional sanction]"
+      }
+    }
+  },
+  {
+    "Key": "LAWSUIT",
+    "Group": "LEGAL",
+    "Description": "Civil action",
+    "Actors": {
+      "Citizens": {
+        "Key": "LAWSUIT",
+        "ADICO": "[Citizens][may][take civil action if they feel that the ruling was incorrect][AATAUAC][or else institutional sanction]"
+      }
+    }
+  }
+]
