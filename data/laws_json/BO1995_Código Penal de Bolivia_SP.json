@@ -1,0 +1,1089 @@
+{
+  "File": "BO1995_Código Penal de Bolivia_SP",
+  "Law": "Penal Code",
+  "Year": "1/1/10",
+  "Language": "SPA",
+  "Country": "Bolivia",
+  "Provisions": [
+    {
+      "Provision": "C_DISINFO_GEN",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_GEN",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_GEN",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_GEN_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_GEN_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_GEN_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MALINFO_GEN",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MALINFO_GEN",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MALINFO_GEN",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MALINFO_GEN_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MALINFO_GEN_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MALINFO_GEN_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_GEN",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_GEN",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_GEN",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_GEN_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_GEN_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_GEN_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_HATE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_HATE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_HATE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_HATE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_HATE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_HATE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_HEALTHOFF",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_HEALTHOFF",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_HEALTHOFF",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_HEALTHOFF_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_HEALTHOFF_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_HEALTHOFF_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_LIFE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_LIFE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_LIFE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_LIFE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_LIFE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_LIFE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_MORAL",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_MORAL",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_MORAL",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_MORAL_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_MORAL_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_MORAL_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_NATSEC",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_NATSEC",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_NATSEC",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_NATSEC_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_NATSEC_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_NATSEC_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_ORDER",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_ORDER",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_ORDER",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_ORDER_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_ORDER_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_ORDER_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_PROPERTY",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_PROPERTY",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_PROPERTY",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_PROPERTY_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_PROPERTY_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_PROPERTY_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_PUBHEALTH",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_PUBHEALTH",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_PUBHEALTH",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_PUBHEALTH_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_PUBHEALTH_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_PUBHEALTH_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_REPUTATION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_REPUTATION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_REPUTATION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_REPUTATION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_REPUTATION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_REPUTATION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_RIGHTS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_RIGHTS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_RIGHTS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_DISINFO_RIGHTS_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_DISINFO_RIGHTS_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_DISINFO_RIGHTS_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_CLASSIFIED",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_CLASSIFIED",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_CLASSIFIED",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_CLASSIFIED_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_CLASSIFIED_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_CLASSIFIED_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_HATE",
+      "Code": 1,
+      "Note": "123, 281"
+    },
+    {
+      "Provision": "I_EXPRESS_HATE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_HATE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_HATE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_HATE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_HATE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_HEALTHOFF",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_HEALTHOFF",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_HEALTHOFF",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_HEALTHOFF_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_HEALTHOFF_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_HEALTHOFF_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_LIFE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_LIFE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_LIFE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_LIFE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_LIFE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_LIFE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_MORAL",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_MORAL",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_MORAL",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_MORAL_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_MORAL_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_MORAL_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_NATSEC",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_NATSEC",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_NATSEC",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_NATSEC_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_NATSEC_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_NATSEC_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_OBSCENE",
+      "Code": 1,
+      "Note": "281"
+    },
+    {
+      "Provision": "I_EXPRESS_OBSCENE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_OBSCENE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_OBSCENE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_OBSCENE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_OBSCENE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_ORDER",
+      "Code": 1,
+      "Note": "123"
+    },
+    {
+      "Provision": "I_EXPRESS_ORDER",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_ORDER",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_ORDER_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_ORDER_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_ORDER_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_PROPERTY",
+      "Code": 1,
+      "Note": "123"
+    },
+    {
+      "Provision": "I_EXPRESS_PROPERTY",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_PROPERTY",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_PROPERTY_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_PROPERTY_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_PROPERTY_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_PUBHEALTH",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_PUBHEALTH",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_PUBHEALTH",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_PUBHEALTH_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_PUBHEALTH_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_PUBHEALTH_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_RELIGION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_RELIGION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_RELIGION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_RELIGION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_RELIGION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_RELIGION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_REPUTATION",
+      "Code": 1,
+      "Note": "282"
+    },
+    {
+      "Provision": "I_EXPRESS_REPUTATION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_REPUTATION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_REPUTATION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_REPUTATION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_REPUTATION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_RIGHTS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_RIGHTS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_RIGHTS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_EXPRESS_RIGHTS_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_EXPRESS_RIGHTS_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_EXPRESS_RIGHTS_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_HATE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_HATE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_HATE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_HATE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_HATE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_HATE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_HEALTHOFF",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_HEALTHOFF",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_HEALTHOFF",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_HEALTHOFF_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_HEALTHOFF_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_HEALTHOFF_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_LIFE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_LIFE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_LIFE",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_LIFE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_LIFE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_LIFE_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_MORAL",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_MORAL",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_MORAL",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_MORAL_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_MORAL_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_MORAL_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_NATSEC",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_NATSEC",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_NATSEC",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_NATSEC_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_NATSEC_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_NATSEC_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_ORDER",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_ORDER",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_ORDER",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_ORDER_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_ORDER_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_ORDER_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_PROPERTY",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_PROPERTY",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_PROPERTY",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_PROPERTY_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_PROPERTY_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_PROPERTY_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_PUBHEALTH",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_PUBHEALTH",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_PUBHEALTH",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_PUBHEALTH_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_PUBHEALTH_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_PUBHEALTH_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_REPUTATION",
+      "Code": 1,
+      "Note": "282"
+    },
+    {
+      "Provision": "I_MISINFO_REPUTATION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_REPUTATION",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_REPUTATION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_REPUTATION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_REPUTATION_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_RIGHTS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_RIGHTS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_RIGHTS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "C_MISINFO_RIGHTS_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "I_MISINFO_RIGHTS_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    },
+    {
+      "Provision": "P_MISINFO_RIGHTS_CRISIS",
+      "Code": "N/A",
+      "Note": null
+    }
+  ]
+}

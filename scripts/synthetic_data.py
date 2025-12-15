@@ -4,6 +4,8 @@ from training_prep_library, import extract_key_definitions
 
 from openai import AzureOpenAI, OpenAI
 
+from collections, import Counter
+
 # defining the base_url
 base_url = "https://hans-ai-foundry.openai.azure.com/openai/v1/"
 
@@ -180,7 +182,33 @@ def generate_synthetic_provisions(key, n, codebook, model):
             "raw": repr(response)
         }
 
-def generate_all_synthetic_rows(keys, n, codebook, model):
+# function for identifying keys with too few samples
+def sparse_keys(rows, threshold=20):
+    """
+    Identify underrepresented keys in training rows.
+
+    Inputs:
+        rows: list of dicts (output of create_training_rows)
+        threshold: int or None
+            - keys with count < threshold are returned
+            - if None, all keys are returned
+
+    Returns:
+        dict: {key: count}
+    """
+
+    key_counts = Counter(row["key"] for row in rows)
+
+    if threshold is None:
+        return dict(key_counts)
+
+    return {
+        key: count
+        for key, count in key_counts.items()
+        if count < threshold
+    }
+
+def generate_all_synthetic_rows(keys, n_map, codebook, model, threshold=20):
     """
     Generate synthetic provisions for multiple keys and return them in
     the 'law_output' format compatible with create_training_rows.
@@ -188,6 +216,11 @@ def generate_all_synthetic_rows(keys, n, codebook, model):
     all_rows_synth = []
 
     for key in keys:
+        current = n_map.get(key, 0)
+        n = threshold - current # number of samples needed per key to meet threshold
+        if n <= 0:
+            continue
+        
         result = generate_synthetic_provisions(key, n, codebook, model)
 
         # Skip if there was an error

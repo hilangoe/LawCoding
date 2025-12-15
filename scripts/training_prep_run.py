@@ -15,14 +15,18 @@ with open("data2/cb_expression_rights.json", "r") as f:
 
 # define human_folder
 
-# processing the training set
+## processing the training set
 raw_results = process_multiple_laws(law_list, model, pdf_folder, human_folder, codebook)
 
-# prepping output for fine-tuning
-
+## prepping output for fine-tuning
 # defining the labels here just in case
 DEONTIC_LABELS = [-1, 1]
 rows, key_to_id, deontic_to_id = create_training_rows(raw_results, codebook, deontic_labels = DEONTIC_LABELS)
+
+## identifying undersupplied keys
+
+
+## creating synthetic data
 
 # save training rows to disk as JSONL
 output_file = "training_data.jsonl"
