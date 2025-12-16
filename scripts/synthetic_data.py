@@ -47,7 +47,7 @@ def get_system_instructions_synth(key, n, codebook) -> str:
     # only grabbing one definition here, since we're making one set of synthetic observations per key
     key_definition = extract_key_definitions([key], codebook) # wrappign key in list because otherwise it won't work
     if not key_definition:
-    raise ValueError(f"No ADICO definition found for key '{key}'. Check codebook and key spelling.")
+        raise ValueError(f"No ADICO definition found for key '{key}'. Check codebook and key spelling.")
     # adding in this error because the key extraction can be fragile
 
     # grabbing the actor to avoid system failure
@@ -55,26 +55,12 @@ def get_system_instructions_synth(key, n, codebook) -> str:
 
     system_instructions = f"""You are a legal expert trained in freedom-of-expression laws tasked with generating synthetic law provisions from an ADICO definition, each with an accompanying deontic value.
 
-# ACTOR CLASS CONSTRAINT (STRICT)
-This ADICO key applies to the following actor class ONLY:
-
-ACTOR_CLASS (NON-NEGOTIABLE) = {actor}
-
-All synthetic provisions MUST use actors that belong to ACTOR_CLASS.
-You MAY paraphrase the actor, but you MUST NOT cross actor classes.
-
-Allowed actor classes:
-- Citizens — individuals, members of the public, private persons.
-- Press — journalists, media organizations, news outlets.
-- IS and SM providers — online platforms, social media companies, intermediaries.
-
 # TASK
 1. Read and understand the ADICO definition at the bottom carefully.
-2. Write {n} different synthetic law provisions that vary in content and in deontic value, while preserving the correct actor class.
-3. **All synthetic provisions MUST apply to the same actor specified in the ADICO definition.**
-4. Return the output as a JSON object matching the schema with LawID = "synth" for all.
-5. The "Provisions" array must contain exactly {n} items.
-6. "Provision" must always equal "{key}" exactly.
+2. Write {n} synthetic law provisions that vary in content and in deontic value for the actor class: {actor}.
+3. Return the output as a JSON object matching the schema with LawID = "synth" for all.
+4. The "Provisions" array must contain exactly {n} items.
+5. "Provision" must always equal "{key}" exactly.
 
 # ADICO COMPONENTS
 Use the following ADICO components to structure the synthetic provisions conceptually. Not all components must appear explicitly in the text.
@@ -84,8 +70,17 @@ Use the following ADICO components to structure the synthetic provisions concept
 - Condition — triggers/limits (e.g., without warrant; intent to deceive; upon order).
 - OrElse (Not required, but may be helpful to explain a match) — sanction/remedy (fine, imprisonment, suspension, civil action).
 
+# ACTOR CLASS CONSTRAINT (STRICT)
+All synthetic provisions MUST use actors that belong to actor class {actor}.
+You MAY paraphrase the actor, but you MUST NOT cross actor classes.
+
+Allowed actor classes:
+- Citizens — individuals, members of the public, private persons.
+- Press — journalists, media organizations, news outlets.
+- IS and SM providers — online platforms, social media companies, intermediaries.
+
 # DEONTIC VALUES
-Each synthetic provision must either indicate whether the ADICO statement is affirmatively imposed for the specified actor (1), or it appears but is explicitly negated for that actor (-1).
+Each provision must either indicate whether the ADICO statement is affirmatively imposed for the specified actor (1), or it appears but is explicitly negated for that actor (-1).
 Deontic must be an integer, not a string.
 
 # OUTPUT FORMAT (STRICT)
