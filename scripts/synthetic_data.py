@@ -1,10 +1,10 @@
 import json, os, time, jsonschema
 
-from training_prep_library, import extract_key_definitions
+from training_prep_library import extract_key_definitions
 
 from openai import AzureOpenAI, OpenAI
 
-from collections, import Counter
+from collections import Counter
 
 # defining the base_url
 base_url = "https://hans-ai-foundry.openai.azure.com/openai/v1/"
@@ -45,21 +45,47 @@ schema = {
 
 def get_system_instructions_synth(key, n, codebook) -> str:
     # only grabbing one definition here, since we're making one set of synthetic observations per key
-    key_definition = extract_key_definitions(key, codebook)
+    key_definition = extract_key_definitions([key], codebook) # wrappign key in list because otherwise it won't work
+    if not key_definition:
+    raise ValueError(f"No ADICO definition found for key '{key}'. Check codebook and key spelling.")
+    # adding in this error because the key extraction can be fragile
 
-    system_instructions = f"""You are a legal expert trained in freedom-of-expression laws.
-Your task is to read a generic ADICO statement and generate synthetic law provisions with an accompanying deontic value.
+    # grabbing the actor to avoid system failure
+    actor = key_definition.split("]")[0].lstrip("[")
+
+    system_instructions = f"""You are a legal expert trained in freedom-of-expression laws tasked with generating synthetic law provisions from an ADICO definition, each with an accompanying deontic value.
+
+# ACTOR CLASS CONSTRAINT (STRICT)
+This ADICO key applies to the following actor class ONLY:
+
+ACTOR_CLASS (NON-NEGOTIABLE) = {actor}
+
+All synthetic provisions MUST use actors that belong to ACTOR_CLASS.
+You MAY paraphrase the actor, but you MUST NOT cross actor classes.
+
+Allowed actor classes:
+- Citizens — individuals, members of the public, private persons.
+- Press — journalists, media organizations, news outlets.
+- IS and SM providers — online platforms, social media companies, intermediaries.
 
 # TASK
-1. Read and understand the ADICO definition carefully.
-2. Write {n} different synthetic law provisions that vary in content and in deontic value.
-3. Record the deontic value of each synthetic provision.
+1. Read and understand the ADICO definition at the bottom carefully.
+2. Write {n} different synthetic law provisions that vary in content and in deontic value, while preserving the correct actor class.
+3. **All synthetic provisions MUST apply to the same actor specified in the ADICO definition.**
 4. Return the output as a JSON object matching the schema with LawID = "synth" for all.
 5. The "Provisions" array must contain exactly {n} items.
 6. "Provision" must always equal "{key}" exactly.
 
+# ADICO COMPONENTS
+Use the following ADICO components to structure the synthetic provisions conceptually. Not all components must appear explicitly in the text.
+- Actor — who is bound (citizens, journalists/media/press, ISP/service providers, authority/regulator, police, court, etc.).
+- Deontic — shall/must/may/may not/prohibited.
+- Aim — regulated behavior (publish, disseminate, monitor, arrest, block, search, etc.).
+- Condition — triggers/limits (e.g., without warrant; intent to deceive; upon order).
+- OrElse (Not required, but may be helpful to explain a match) — sanction/remedy (fine, imprisonment, suspension, civil action).
+
 # DEONTIC VALUES
-Each synthetic provision must either indicate whether the ADICO statement is present (1) or negated (-1).
+Each synthetic provision must either indicate whether the ADICO statement is affirmatively imposed for the specified actor (1), or it appears but is explicitly negated for that actor (-1).
 Deontic must be an integer, not a string.
 
 # OUTPUT FORMAT (STRICT)
@@ -208,15 +234,14 @@ def sparse_keys(rows, threshold=20):
         if count < threshold
     }
 
-def generate_all_synthetic_rows(keys, n_map, codebook, model, threshold=20):
+def generate_all_synthetic_rows(key_counts, codebook, model, threshold=20):
     """
     Generate synthetic provisions for multiple keys and return them in
     the 'law_output' format compatible with create_training_rows.
     """
     all_rows_synth = []
 
-    for key in keys:
-        current = n_map.get(key, 0)
+    for key, current in key_counts.items():
         n = threshold - current # number of samples needed per key to meet threshold
         if n <= 0:
             continue
@@ -231,6 +256,12 @@ def generate_all_synthetic_rows(keys, n_map, codebook, model, threshold=20):
         # Warn but still process if the list is empty
         if not result["Provisions"]:
             print(f"Warning: no synthetic provisions generated for key {key}")
+
+        if len(result["Provisions"]) < n:
+            print(
+                f"Warning: requested {n} synth samples for {key}, "
+                f"got {len(result['Provisions'])}"
+            )
 
         # Convert to structure expected by create_training_rows
         result_converted = {
