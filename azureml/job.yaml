@@ -1,0 +1,35 @@
+$schema: 
+https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+type: command
+
+# Inputs
+inputs:
+  dataset_folder:
+    type: uri_folder
+    path: ./data  # local data folder in your repo
+  metadata_file:
+    type: uri_file
+    path: ./data/metadata.json
+  data_config:
+    type: uri_file
+    path: ./azureml/configs/data.json
+  training_config:
+    type: uri_file
+    path: ./azureml/configs/training.json
+  model_config:
+    type: uri_file
+    path: ./azureml/configs/model.json
+
+# Command to run
+command: >
+  python src/train.py
+  --data ${{inputs.data_config}}
+  --training ${{inputs.training_config}}
+  --model ${{inputs.model_config}}
+
+# Outputs
+outputs:
+  adapters:
+    type: uri_folder
+    path: ./outputs  # matches save_dir in training.json
+

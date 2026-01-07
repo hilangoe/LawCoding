@@ -1,0 +1,11 @@
+{
+  "base_model": "bert-base-uncased",
+  "use_lora": true,
+  "lora": {
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.1,
+    "bias": "none",
+    "target_modules": ["query", "key", "value"]
+  }
+}

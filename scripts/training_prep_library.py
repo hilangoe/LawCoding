@@ -1,7 +1,7 @@
 # this script contains all the functions to prep the training data for fine-tuning (LoRA) BERT models
 # this code will take the raw law texts (PDFs) and reconstruct the snippets/provisions relevant to the human-coded data
 
-import json, os, time, jsonschema
+import json, os, time, jsonschema, glob
 
 from openai import AzureOpenAI, OpenAI
 
@@ -486,21 +486,33 @@ def process_multiple_laws(law_list, model, codebook, pdf_dir, json_dir, debug=Fa
     errors = [] # all error records
 
     for law_id in law_list:
-        # building file paths
-        pdf_path = os.path.join(pdf_dir, f"{law_id}.pdf")
-        json_path = os.path.join(json_dir, f"{law_id}.json")
+        # identifying all possible matches        
+        pdf_candidates = glob.glob(os.path.join(pdf_dir, f"{law_id}*.pdf"))
 
-
-        # existence check
-        if not os.path.isfile(pdf_path):
+        if not pdf_candidates:
             errors.append({
-            "LawID": law_id,
-            "Success": False,
-            "Results": [],
-            "Error": f"Missing PDF file at {pdf_path}"
+                "LawID": law_id,
+                "Success": False,
+                "Results": [],
+                "Error": f"No PDF files found for {law_id}"
             })
             continue
 
+        # prefer English translation if present
+        pdf_path = None
+        for p in pdf_candidates:
+            if "ENG" in os.path.basename(p).upper():
+                pdf_path = p
+                break
+
+        # otherwise just use the first match
+        if pdf_path is None:
+            pdf_path = pdf_candidates[0]
+        
+        # JSON: building file paths
+        json_path = os.path.join(json_dir, f"{law_id}.json")
+
+        # existence check
         if not os.path.isfile(json_path):
             errors.append({
                 "LawID": law_id,

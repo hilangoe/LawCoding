@@ -1,0 +1,8 @@
+{
+  "max_len": 512,
+  "batch_size": 4,
+  "learning_rate": 2e-5,
+  "epochs": 4,
+  "gradient_clip": 1.0,
+  "save_dir": "outputs" 
+}
