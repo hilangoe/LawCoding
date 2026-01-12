@@ -1,0 +1,6 @@
+{
+  "train_jsonl": "../../data/training_data_dev.jsonl",
+  "metadata_path": "../../data/metadata.json",
+  "output_dir": "outputs/dev"
+}
+

@@ -2,7 +2,7 @@ $schema:
 https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
 
-compute: ML-compute
+compute: ML-computing_instance # PLACEHOLDER!!!
 
 # Inputs
 inputs:
@@ -14,10 +14,10 @@ inputs:
     path: ./data/metadata.json
   data_config:
     type: uri_file
-    path: ./azureml/configs/data.json
+    path: ./azureml/configs/data_dev.json
   training_config:
     type: uri_file
-    path: ./azureml/configs/training.json
+    path: ./azureml/configs/training_dev.json
   model_config:
     type: uri_file
     path: ./azureml/configs/model.json
@@ -33,5 +33,9 @@ command: >
 outputs:
   adapters:
     type: uri_folder
-    path: ./outputs  # matches save_dir in training.json
+    path: ./outputs/dev  # separate dev folder
+
+# override display/experiment names
+display_name: dev-training
+experiment_name: bert-adapter-dev
 

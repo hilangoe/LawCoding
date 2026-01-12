@@ -5,6 +5,8 @@ __pycache__/
 .env
 deliverables/
 docs/
-data/
+data/laws_json
+data/laws_pdf
+data/laws_misc
 .~
 scripts/training_prep_test.ipynb

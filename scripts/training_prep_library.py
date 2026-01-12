@@ -1,7 +1,7 @@
 # this script contains all the functions to prep the training data for fine-tuning (LoRA) BERT models
 # this code will take the raw law texts (PDFs) and reconstruct the snippets/provisions relevant to the human-coded data
 
-import json, os, time, jsonschema, glob
+import json, os, time, jsonschema
 
 from openai import AzureOpenAI, OpenAI
 
@@ -123,9 +123,9 @@ Your task is to read a full legal text and extract provisions relevant to specif
 4. Return the output as a JSON object matching the schema.
 
 # MULTILINGUAL TEXT RULE
-If the law or any provision is not in English:
-  1. Extract the original text verbatim.
-  2. Provide a faithful, literal English translation.
+If the law is not in English:
+  1. Provide a faithful, literal English translation.
+  2. Do NOT include the original-language text.
   3. Do not summarize, paraphrase, shorten, or reinterpret.
   4. Preserve legal modality (may, must, shall, shall not).
 
@@ -332,11 +332,13 @@ def merge_text_data(provisions, key_data):
     Returns
     -------
     list of dict
-        Each dict has: key, text, deontic
+        Each dict has: law_id, key, text, deontic
     """
     # validate data input
     if not provisions or "Provisions" not in provisions:
         return []
+
+    law_id = provisions.get("LawID")
 
     # initializing rows
     merged = []
@@ -357,6 +359,7 @@ def merge_text_data(provisions, key_data):
             continue
 
         merged.append({
+            "law_id": law_id, # adding law_id so we can distinguish between real and synthetic data
             "key": key,
             "text": text,
             "deontic": deontic
@@ -487,8 +490,17 @@ def process_multiple_laws(law_list, model, codebook, pdf_dir, json_dir, debug=Fa
 
     for law_id in law_list:
         # identifying all possible matches        
-        pdf_candidates = glob.glob(os.path.join(pdf_dir, f"{law_id}*.pdf"))
-
+        all_files = os.listdir(pdf_dir)
+        print(f"\nLooking for {law_id} in {pdf_dir}")
+        print("All files:", all_files[:10])
+        
+        pdf_candidates = [
+            os.path.join(pdf_dir, f)
+            for f in all_files
+            if law_id.lower() in f.lower() and f.lower().endswith(".pdf")
+        ]
+        print("Candidates found:", pdf_candidates)
+        
         if not pdf_candidates:
             errors.append({
                 "LawID": law_id,
@@ -497,17 +509,9 @@ def process_multiple_laws(law_list, model, codebook, pdf_dir, json_dir, debug=Fa
                 "Error": f"No PDF files found for {law_id}"
             })
             continue
-
-        # prefer English translation if present
-        pdf_path = None
-        for p in pdf_candidates:
-            if "ENG" in os.path.basename(p).upper():
-                pdf_path = p
-                break
-
-        # otherwise just use the first match
-        if pdf_path is None:
-            pdf_path = pdf_candidates[0]
+        
+        # prefer English translation if present, using next generator to loop through candidates looking for ENG
+        pdf_path = next((p for p in pdf_candidates if "ENG" in os.path.basename(p).upper()), pdf_candidates[0]) # first item set as default fallback
         
         # JSON: building file paths
         json_path = os.path.join(json_dir, f"{law_id}.json")
@@ -543,24 +547,22 @@ def process_multiple_laws(law_list, model, codebook, pdf_dir, json_dir, debug=Fa
         "Errors": errors
     }
 
-# converting multiple law processing into training data
+# prepping data for fine-tuning
 def create_training_rows(law_outputs, codebook, deontic_labels=None):
     """
-    Build training rows for ML fine-tuning.
+    Build training rows from raw_results['Successes'] directly.
 
     Inputs:
-        law_outputs: list of dicts (each from process_law())
-        codebook: list of dicts containing the full ontology, including all Keys
-        deontic_labels: optional list of all deontic categories.
-                        If None, we infer them from law_outputs.
+        law_outputs: list of provision dicts
+        codebook: list of dicts with full ontology
+        deontic_labels: optional list of all deontic categories. If None, use [-1, 1]
 
     Returns:
-        rows: list of dicts (each training sample)
+        rows: list of dicts (training samples)
         key_to_id: mapping from key label -> numeric ID
         deontic_to_id: mapping from deontic label -> numeric ID
     """
-
-    # extracting full list of keys from codebook
+    # extract all ontology keys from codebook
     ontology_keys = set()
     for entry in codebook:
         actors = entry.get("Actors", {}) or {}
@@ -569,45 +571,27 @@ def create_training_rows(law_outputs, codebook, deontic_labels=None):
             if key:
                 ontology_keys.add(key)
 
-    # build stable mapping from key to ID
     key_to_id = {k: i for i, k in enumerate(sorted(ontology_keys))}
 
-    # build deontic mapping
     if deontic_labels is None:
-        observed = set()
-        for out in law_outputs:
-            if out.get("Success"):
-                for r in out.get("Results", []):
-                    observed.add(r["deontic"])
-        deontic_labels = sorted(observed)
+        deontic_labels = [-1, 1]
 
     deontic_to_id = {d: i for i, d in enumerate(deontic_labels)}
 
-    # build training rows
-
     rows = []
-
-    for law_output in law_outputs:
-        if not law_output.get("Success"):
-            continue
-
-        law_id = law_output["LawID"]
-
-        for r in law_output.get("Results", []):
-            rows.append({
-                "text": r["text"],
-                # labels for ML models
-                "key_label": key_to_id.get(r["key"]),
-                "deontic_label": deontic_to_id.get(r["deontic"]),
-                # original vars for inspection
-                "key": r["key"],
-                "deontic": r["deontic"],
-                "law_id": law_id
-            })
+    for prov in law_outputs:
+        rows.append({
+            "law_id": prov["law_id"], # adding law_id here so we can distinguish between real and synthetic
+            "text": prov["text"],
+            "key_label": key_to_id.get(prov["key"]),
+            "deontic_label": deontic_to_id.get(prov["deontic"]),
+            "key": prov["key"],
+            "deontic": prov["deontic"]
+        })
 
     return rows, key_to_id, deontic_to_id
 
-def build_metadata(codebook, output_dir):
+def build_metadata(codebook, metadata_path):
     """
     Build metadata needed for model training.
     """

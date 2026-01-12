@@ -259,19 +259,12 @@ def generate_all_synthetic_rows(key_counts, codebook, model, threshold=20):
             )
 
         # Convert to structure expected by create_training_rows
-        result_converted = {
-            "Success": True, # this is needed to match the output from the provision extraction
-            "LawID": result.get("LawID", "synth"),
-            "Results": [
-                {
-                    "key": p["Provision"],
-                    "text": p["Text"],
-                    "deontic": p["Deontic"]
-                }
-                for p in result["Provisions"]
-            ]
-        }
-
-        all_rows_synth.append(result_converted)
+        for p in result["Provisions"]:
+            all_rows_synth.append({
+                "law_id": result.get("LawID", "synth"),
+                "key": p["Provision"],
+                "text": p["Text"],
+                "deontic": p["Deontic"]
+            })
 
     return all_rows_synth

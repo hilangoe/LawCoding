@@ -1,5 +1,5 @@
 {
-  "base_model": "bert-base-uncased",
+  "base_model": "nlpaueb/legal-bert-base-uncased",
   "use_lora": true,
   "lora": {
     "r": 16,
