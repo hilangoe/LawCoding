@@ -12,6 +12,21 @@ from model import build_model
 from data import make_dataloader, LawDataset, compute_class_weights
 from utils import set_seed
 
+# loading data safely on azure and locally
+
+from pathlib import Path
+
+with open(args.data_config) as f:
+    data_cfg = json.load(f)
+
+root = Path.cwd()
+
+train_path = root / data_cfg["train_jsonl"]
+metadata_path = root / data_cfg["metadata_path"]
+output_dir = root / data_cfg["output_dir"]
+
+output_dir.mkdir(parents=True, exist_ok=True)
+
 def train_model(data_cfg_path, training_cfg_path, model_cfg_path):
     # loading config files
     with open(data_cfg_path) as f:

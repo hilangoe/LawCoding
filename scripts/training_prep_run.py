@@ -1,7 +1,27 @@
 # this script will execute the pipeline to prep the training data
 from pathlib import Path
 import pandas as pd
-import json, requests
+import json, requests, logging
+
+# configuring logging once for the job
+# creating logs directory
+LOG_DIR = Path(__file__).resolve().parent / "logs"
+LOG_DIR.mkdir(exist_ok=True)
+
+log_file = LOG_DIR / "law_extraction.log"
+
+# log config
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler() # printing to console too
+    ]
+)
+
+logger = logging.getLogger(__name__)
+
 
 # importing local modules
 from training_prep_library import process_multiple_laws, create_training_rows, build_metadata
@@ -52,8 +72,15 @@ raw_results = process_multiple_laws(
     model=model,
     pdf_dir=pdf_dir,
     json_dir=json_dir,
-    codebook=codebook
+    codebook=codebook,
+    debug=False,
+    max_chars=100000,
+    overlap_chars=1000
 )
+
+all_raw_rows = raw_results["Successes"]
+logger.info(f"Total rows after processing all laws: {len(all_raw_rows)}")
+
 
 ## prepping output for fine-tuning
 # defining the labels here just in case
@@ -63,18 +90,19 @@ DEONTIC_LABELS = [-1, 1]
 threshold = 10
 
 # calculating needed synthetic samples per key
-key_counts = sparse_keys(raw_results["Successes"],
+key_counts = sparse_keys(rows=raw_results["Successes"],
+                         codebook=codebook,
                          threshold=threshold)
 
 if key_counts:
-    print("Keys needing synthetic data (current count < threshold):")
-    print(f"{'Key':<25} {'Current Count':<15} {'Needed':<10}")
-    print("-" * 55)
+    logger.info("\nKeys needing synthetic data (current count < threshold):")
+    print(f"{'Key':<40} {'Current Count':<15} {'Needed':<10}")
+    logger.info("-" * 70)
     for key, count in key_counts.items():
-        needed = threshold - count  # how many synthetic samples to generate
-        print(f"{key:<25} {count:<15} {needed:<10}")
+        needed = max(threshold - count, 0)  # ensure non-negative
+        logger.info(f"{key:<40} {count:<15} {needed:<10}")
 else:
-    print("All keys meet or exceed the threshold. No synthetic data needed.")
+    logger.info("\nAll keys meet or exceed the threshold. No synthetic data needed.")
 
 # creating synthetic data
 synth_rows = generate_all_synthetic_rows(
@@ -96,16 +124,16 @@ rows_final, key_to_id, deontic_to_id = create_training_rows(law_outputs=all_raw_
 output_dir = BASE_DIR / "data"
 output_dir.mkdir(exist_ok=True)
 
-output_file = "training_data.jsonl"
+output_file = output_dir / "training_data.jsonl"
 
 with open(output_file, "w", encoding="utf-8") as f:
     for row in rows_final:
         json_line = json.dumps(row, ensure_ascii=False)
         f.write(json_line + "\n")
 
-print(f"Saved {len(rows_final)} rows to {output_file}")
+logger.info(f"Saved {len(rows_final)} rows to {output_file}")
 
 # creating metadata json
-meta_data_file = "../data/metadata.json"
+meta_data_file = output_dir / "metadata.json"
 
 build_metadata(codebook, meta_data_file)

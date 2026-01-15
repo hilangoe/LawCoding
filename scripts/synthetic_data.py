@@ -1,10 +1,13 @@
-import json, os, time, jsonschema
+import json, os, time, jsonschema, logging
 
 from training_prep_library import extract_key_definitions
 
 from openai import AzureOpenAI, OpenAI
 
 from collections import Counter
+
+# defining the logger
+logger = logging.getLogger(__name__)
 
 # defining the base_url
 base_url = "https://hans-ai-foundry.openai.azure.com/openai/v1/"
@@ -143,11 +146,11 @@ def generate_synthetic_provisions(key, n, codebook, model):
     # usage info
     usage = getattr(response, "usage", None)
     if usage:
-        print("\nToken Usage:")
-        print(f"Input tokens: {usage.input_tokens}")
-        print(f"Output tokens: {usage.output_tokens}")
-        print(f"Total tokens: {usage.total_tokens}")
-        print(f"Execution time: {duration} seconds\n")
+        logger.info("=== Synthetic Provision Generation Usage ===")
+        logger.info("Input tokens: %d", usage.input_tokens)
+        logger.info("Output tokens: %d", usage.output_tokens)
+        logger.info("Total tokens: %d", usage.total_tokens)
+        logger.info("Execution time: %.2f seconds", duration)
 
     # response handling
     raw_text = None  # ensure defined for exception blocks
@@ -185,12 +188,15 @@ def generate_synthetic_provisions(key, n, codebook, model):
         return output
 
     except json.JSONDecodeError:
+        logger.error("Synthetic provisions: model returned invalid JSON for key %s", key)
         return {
             "Error": "Model returned invalid JSON",
             "raw": raw_text
         }
 
     except jsonschema.ValidationError as e:
+        logger.error("Synthetic provisions: JSON schema validation failed for key %s: %s", key, str(e)
+        )
         return {
             "Error": "Model returned JSON that failed schema validation",
             "details": str(e),
@@ -198,36 +204,52 @@ def generate_synthetic_provisions(key, n, codebook, model):
         }
 
     except Exception as e:
+        logger.error("Synthetic provisions: LLM extraction failed for key %s: %s", key, e)
         return {
             "Error": f"LLM extraction failed for {key}: {e}",
             "raw": repr(response)
         }
 
 # function for identifying keys with too few samples
-def sparse_keys(rows, threshold=20):
+def sparse_keys(rows, codebook, threshold=20):
     """
-    Identify underrepresented keys in training rows.
+    Identify underrepresented keys in training rows, including keys with zero rows.
 
-    Inputs:
-        rows: list of dicts (output of create_training_rows)
-        threshold: int or None
-            - keys with count < threshold are returned
-            - if None, all keys are returned
+    Parameters
+    ----------
+    rows : list of dicts
+        Each dict should have a "key" field (real or merged training rows).
+    codebook : list of dicts
+        Full ontology codebook to extract all keys.
+    threshold : int
+        Minimum number of rows per key; keys below this count are returned.
 
-    Returns:
-        dict: {key: count}
+    Returns
+    -------
+    dict
+        {key: current_count} for keys below threshold, including zero-count keys.
     """
 
-    key_counts = Counter(row["key"] for row in rows)
+    # Extract all ontology keys from the codebook
+    all_keys = set()
+    for entry in codebook:
+        actors = entry.get("Actors", {}) or {}
+        for actor_info in actors.values():
+            key = actor_info.get("Key")
+            if key:
+                all_keys.add(key)
 
-    if threshold is None:
-        return dict(key_counts)
+    # Count rows in the training data
+    row_counts = Counter(r["key"] for r in rows if "key" in r and r["key"] is not None)
 
-    return {
-        key: count
-        for key, count in key_counts.items()
-        if count < threshold
-    }
+    # Include all keys, even if count is zero
+    sparse = {}
+    for key in all_keys:
+        count = row_counts.get(key, 0)
+        if count < threshold:
+            sparse[key] = count
+
+    return sparse
 
 def generate_all_synthetic_rows(key_counts, codebook, model, threshold=20):
     """
@@ -245,17 +267,22 @@ def generate_all_synthetic_rows(key_counts, codebook, model, threshold=20):
 
         # Skip if there was an error
         if "Provisions" not in result:
-            print(f"Error generating synthetic data for key {key}: {result}")
+            logger.error("Error generating synthetic data for key %s: %s", key, result)
             continue
 
         # Warn but still process if the list is empty
         if not result["Provisions"]:
-            print(f"Warning: no synthetic provisions generated for key {key}")
+            logger.warning(
+                "No synthetic provisions generated for key %s",
+                key
+            )
 
         if len(result["Provisions"]) < n:
-            print(
-                f"Warning: requested {n} synth samples for {key}, "
-                f"got {len(result['Provisions'])}"
+            logger.warning(
+                    "Requested %d synthetic samples for key %s, got %d",
+                    n,
+                    key,
+                    len(result["Provisions"])
             )
 
         # Convert to structure expected by create_training_rows

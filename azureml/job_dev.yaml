@@ -1,17 +1,17 @@
-$schema: 
-https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
 
-compute: ML-computing_instance # PLACEHOLDER!!!
+compute: ml-compute-dev # need to update
+code: .
+
+environment:
+  name: bert-lora-env
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
+  conda_file: ./azureml/environment/conda.yaml
+
 
 # Inputs
 inputs:
-  dataset_folder:
-    type: uri_folder
-    path: ./data  # local data folder in your repo
-  metadata_file:
-    type: uri_file
-    path: ./data/metadata.json
   data_config:
     type: uri_file
     path: ./azureml/configs/data_dev.json
@@ -24,18 +24,13 @@ inputs:
 
 # Command to run
 command: >
-  python src/train.py
-  --data ${{inputs.data_config}}
+  python ./azureml/scripts/train.py
+  --data_config ${{inputs.data_config}}
   --training ${{inputs.training_config}}
   --model ${{inputs.model_config}}
+  --output_dir ${{outputs.adapters_dev}}
 
 # Outputs
 outputs:
-  adapters:
+  adapters_dev:
     type: uri_folder
-    path: ./outputs/dev  # separate dev folder
-
-# override display/experiment names
-display_name: dev-training
-experiment_name: bert-adapter-dev
-

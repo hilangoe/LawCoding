@@ -10,3 +10,5 @@ data/laws_pdf
 data/laws_misc
 .~
 scripts/training_prep_test.ipynb
+scripts/.virtual_documents/
+scripts/.ipynb_checkpoints/
