@@ -1,7 +1,7 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
 
-compute: ml-compute-dev # need to update
+compute: lawcoding-dev
 code: .
 
 environment:
