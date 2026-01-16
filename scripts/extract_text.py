@@ -1,6 +1,6 @@
 #extract_text.py
 from __future__ import annotations
-
+from datetime import datetime
 import os, json, mimetypes, tempfile, io, re
 from typing import Union, Tuple, Dict, Any, Optional
 
@@ -228,7 +228,23 @@ def _save_textfile(text: str, prefix: str, suffix: str = ".txt") -> Optional[str
         f.write(text)
     return path
 
-from datetime import datetime
+def extractor_status(is_pdf: bool) -> str:
+    if not is_pdf:
+        return "Non-PDF input (PDF extractors not used)"
+
+    skipped = []
+    if not _HAS_PYPDF:
+        skipped.append("pypdf")
+    if not PDF_OK:
+        skipped.append("pdfplumber")
+    if not _HAS_OCR:
+        skipped.append("OCR")
+
+    return (
+        f"Skipped extractors: {', '.join(skipped)}"
+        if skipped else
+        "All extractors available"
+    )
 
 def extract_to_box(upload) -> tuple[str, str, Optional[str]]:
     data, name = _file_to_bytes(upload)
@@ -255,7 +271,12 @@ def extract_to_box(upload) -> tuple[str, str, Optional[str]]:
         chars = f"{len(text):,}"
         tool_note = f" via **{tool}**" if tool else ""
         dl = _save_textfile(text, prefix="extracted")
-        return text, f"Extracted **{chars}** characters from *{base}*{tool_note}. You can edit the text below.", dl
+        return (
+            text,
+            f"Extracted **{chars}** characters from *{base}*{tool_note}.\n\n"
+            f"{extractor_status(is_pdf)}",
+            dl,
+        )
     else:
         hints = []
         if is_pdf and not _HAS_OCR:
@@ -263,8 +284,12 @@ def extract_to_box(upload) -> tuple[str, str, Optional[str]]:
         if is_pdf and not (_HAS_PYPDF or PDF_OK):
             hints.append("No PDF extractors available (install pypdf/pdfplumber)")
         extra = ("\n" + "; ".join(hints)) if hints else ""
-        return "", f"Could not extract readable text from *{base}*. You can paste text into the box manually.{extra}", None
-
+        return (
+            "",
+            f"Could not extract readable text from *{base}*.\n\n"
+            f"{extractor_status(is_pdf)}",
+            None,
+        )
 
 def _save_json_to_tmp(payload: Dict[str, Any] | Any) -> str:
     """Save payload to a temp JSON file and return its path."""

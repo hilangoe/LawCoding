@@ -178,8 +178,14 @@ The following definitions apply only to the keys you must extract:
 
 
 # need function for chunking because of long laws, now with overlap
-def chunk_text(law_text, max_chars=100000, overlap_chars=1000):
-    chunks = []
+def iter_chunks(law_text, max_chars=100000, overlap_chars=1000):
+    """
+    Memory-safe chunk generator.
+    Yields one chunk at a time instead of building a full list.
+    """
+    if overlap_chars >= max_chars:
+        raise ValueError("overlap_chars must be smaller than max_chars")
+
     start = 0
     text_len = len(law_text)
 
@@ -194,20 +200,17 @@ def chunk_text(law_text, max_chars=100000, overlap_chars=1000):
 
         chunk = law_text[start:end].strip()
         if chunk:
-            chunks.append(chunk)
+            yield chunk
 
-        # adding overlap to prevent context loss
-        next_start = end - overlap_chars
-        start = max(next_start, end if overlap_chars <= 0 else 0)
+        if end == text_len:
+            break
 
-        # safety
-        if start >= end:
-            start = end
-
-    return chunks
+        start = end - overlap_chars
+        if start < 0:
+            start = 0
 
 # function for processing individual laws, now with chunking built in
-def get_provisions(law_text, law_id, requested_keys, codebook, model, debug=False, max_chars=100000, overlap_chars=10000):
+def get_provisions(law_text, law_id, requested_keys, codebook, model, debug=False, max_chars=100000, overlap_chars=1000):
     """
     Processes long law text by chunking if needed, then aggregates provisions per key.
     Adds chunk overlap and logs detailed outcomes.
@@ -233,12 +236,14 @@ def get_provisions(law_text, law_id, requested_keys, codebook, model, debug=Fals
         logger.warning(f"{law_id} - No deployed model defined.")
         return {"Error": "No deployed model defined."}
 
-    # Split into chunks
-    chunks = chunk_text(law_text, max_chars=max_chars)
+    # use an iterator instead of a full list
+    chunk_iter = iter_chunks(law_text, max_chars=max_chars, overlap_chars=overlap_chars)
+    
+    # don't calculate length or average upfront (memory saver)
+    logger.info(f"{law_id} - Processing law with chunk iterator")
+
     if debug:
         logger.debug(f"Law text length: {len(law_text)}")
-        logger.debug(f"Law split into {len(chunks)} chunks")
-    logger.info(f"{law_id} - Law split into {len(chunks)} chunks")
 
     # Aggregate results
     provisions_by_key = {key: [] for key in requested_keys}
@@ -253,12 +258,12 @@ def get_provisions(law_text, law_id, requested_keys, codebook, model, debug=Fals
         "empty_provisions": 0,
         "exception": 0,
     }
-
-    for i, chunk in enumerate(chunks):
+    
+    MAX_CHUNKS = 200
+    for i, chunk in enumerate(chunk_iter, start=1):  # start=1 for human-friendly numbering
+        if i > MAX_CHUNKS:
+            raise RuntimeError(f"{law_id} - Chunking runaway detected (> {MAX_CHUNKS} chunks)")
         chunk_stats["total_chunks"] += 1
-        if debug:
-            logger.debug(f"\n--- Processing chunk {i+1}/{len(chunks)} ---")
-        logger.info(f"{law_id} - Processing chunk {i+1}/{len(chunks)}")
 
         # Create prompt
         prompt = f"""

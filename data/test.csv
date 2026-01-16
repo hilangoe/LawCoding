@@ -1,34 +1,31 @@
 path,category
-renamed_json/(Laos 2014)_01.json,digital_age
-renamed_json/(Hungary 2021)_01.json,protected_speech
-renamed_json/(Chad 2014)_01.json,press
-renamed_json/(El Salvador 1997)_01.json,general
-renamed_json/(Philippines 1930)_01.json,general
-renamed_json/(Taiwan 2020)_01.json,emergency
+renamed_json/(Chile 2001)_01.json,press
+renamed_json/(Hungary 2012)_01.json,pcc_code
+renamed_json/(Malawi 2023)_01.json,pcc_code
 renamed_json/(Sierra Leone 2021)_01.json,cybersecurity
-renamed_json/(Gambia 2009)_01.json,press
-renamed_json/(Canada 2018)_01.json,protected_speech
-renamed_json/(Algeria 1969)_01.json,general
-renamed_json/(Thailand 2007)_01.json,cybersecurity
-renamed_json/(South Sudan 2013)_01.json,press
-renamed_json/(Lesotho 2021)_01.json,emergency
-renamed_json/(Bolivia 1995)_01.json,general
-renamed_json/(Poland 1992)_01.json,press
-renamed_json/(Laos 2008)_01.json,press
-renamed_json/(El Salvador 2024)_01.json,cybersecurity
-renamed_json/(Australia 2018)_01.json,protected_speech
-renamed_json/(Algeria 2024)_01.json,general
-renamed_json/(Kosovo 2006)_01.json,general
-renamed_json/(Fiji 2022)_01.json,press
-renamed_json/(Algeria 2001)_01.json,general
-renamed_json/(Kenya 2018)_01.json,cybersecurity
-renamed_json/(Venezuela 2024)_02.json,protected_speech
-renamed_json/(Guyana 1997)_01.json,protected_speech
-renamed_json/(El Salvador 2016)_01.json,cybersecurity
-renamed_json/(Nicaragua 2020)_01.json,cybersecurity
-renamed_json/(Botswana 2020)_02.json,emergency
-renamed_json/(Algeria 1995)_01.json,general
-renamed_json/(Namibia 2020)_01.json,emergency
-renamed_json/(African Union 2002)_01.json,general
+renamed_json/(Tajikistan 2021)_01.json,emergency
+renamed_json/(Hungary 2021)_01.json,general
+renamed_json/(Hungary 2020)_01.json,emergency
+renamed_json/(Venezuela 2000)_02.json,press
+renamed_json/(African Union 1981)_01.json,pcc_code
+renamed_json/(Pakistan 2020)_01.json,digital_age
+renamed_json/(Bhutan 2008)_01.json,general
+renamed_json/(Laos 2014)_01.json,digital_age
+renamed_json/(Venezuela 2000)_01.json,pcc_code
+renamed_json/(Zambia 2025)_01.json,cybersecurity
 renamed_json/(Poland 2004)_01.json,press
-renamed_json/(Bhutan 2008)_01.json,protected_speech
+renamed_json/(Hungary 2011)_01.json,pcc_code
+renamed_json/(Algeria 2006)_01.json,pcc_code
+renamed_json/(Thailand 2007)_01.json,cybersecurity
+renamed_json/(Nicaragua 2020)_01.json,cybersecurity
+renamed_json/(Zimbabwe 2020)_01.json,emergency
+renamed_json/(Guyana 1959)_01.json,general
+renamed_json/(El Salvador 1997)_02.json,press
+renamed_json/(Algeria 1995)_01.json,pcc_code
+renamed_json/(El Salvador 2024)_01.json,cybersecurity
+renamed_json/(Bolivia 2010)_01.json,general
+renamed_json/(Guyana 1997)_01.json,general
+renamed_json/(South Sudan 2013)_01.json,press
+renamed_json/(Malawi 2017)_01.json,press
+renamed_json/(Kenya 2018)_01.json,cybersecurity
+renamed_json/(Angola 2020)_01.json,pcc_code
