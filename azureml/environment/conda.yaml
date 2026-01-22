@@ -9,7 +9,7 @@ dependencies:
       - torch>=2.0.0
       - torchvision
       - torchaudio
-      - transformers>=4.35.0,4.42
+      - transformers>=4.35.0
       - peft>=0.4.0
       - datasets
       - sentencepiece

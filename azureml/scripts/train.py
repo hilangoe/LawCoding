@@ -16,18 +16,10 @@ from utils import set_seed
 
 from pathlib import Path
 
-with open(args.data_config) as f:
-    data_cfg = json.load(f)
+def train_model(data_cfg_path, training_cfg_path, model_cfg_path, output_dir):
 
-root = Path.cwd()
-
-train_path = root / data_cfg["train_jsonl"]
-metadata_path = root / data_cfg["metadata_path"]
-output_dir = root / data_cfg["output_dir"]
-
-output_dir.mkdir(parents=True, exist_ok=True)
-
-def train_model(data_cfg_path, training_cfg_path, model_cfg_path):
+    root = Path.cwd()
+    
     # loading config files
     with open(data_cfg_path) as f:
         data_cfg = json.load(f)
@@ -36,11 +28,16 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path):
     with open(model_cfg_path) as f:
         model_cfg = json.load(f)
 
+    metadata_path = root / data_cfg["metadata_path"]
+
     # loading meta data
-    with open(data_cfg["metadata_path"]) as f:
+    with open(metadata_path) as f:
         metadata = json.load(f)
     num_keys = metadata["num_keys"]
     num_deontic = metadata["num_deontic"]
+
+    SAVE_DIR = Path(output_dir)
+    SAVE_DIR.mkdir(parents=True, exist_ok=True)
 
     # setting training parameters
     MAX_LEN = train_cfg["max_len"]
@@ -48,7 +45,6 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path):
     LR = train_cfg["learning_rate"]
     EPOCHS = train_cfg["epochs"]
     GRAD_CLIP = train_cfg.get("gradient_clip", 1.0)
-    SAVE_DIR = train_cfg.get("save_dir", data_cfg.get("output_dir", "outputs"))
 
     BASE_MODEL = model_cfg["base_model"]
     USE_LORA = model_cfg.get("use_lora", True)
@@ -65,7 +61,7 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path):
     )
 
     # preparing dataset and loader
-    train_file = data_cfg["train_jsonl"]
+    train_file = root / data_cfg["train_jsonl"]
 
     loader = make_dataloader(train_file, tokenizer, MAX_LEN, BATCH_SIZE, shuffle=True)
 
@@ -109,7 +105,6 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path):
             pbar.set_postfix({"loss": loss.item()})
 
     # saving model
-    os.makedirs(SAVE_DIR, exist_ok=True)
     model.base_model.save_pretrained(os.path.join(SAVE_DIR, "lora"))
     torch.save(
         {
@@ -127,9 +122,15 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path):
 # entry point
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data", type=str, required=True, help="Path to data.json")
-    parser.add_argument("--training", type=str, required=True, help="Path to training.json")
-    parser.add_argument("--model", type=str, required=True, help="Path to model.json")
+    parser.add_argument("--data_config", type=str, required=True)
+    parser.add_argument("--training_config", type=str, required=True)
+    parser.add_argument("--model_config", type=str, required=True)
+    parser.add_argument("--output_dir", type=str, required=True)
     args = parser.parse_args()
 
-    train_model(args.data, args.training, args.model)
+    train_model(args.data_config, 
+                args.training_config, 
+                args.model_config,
+               args.output_dir
+    )
+

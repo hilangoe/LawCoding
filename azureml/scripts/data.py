@@ -4,7 +4,8 @@ from torch.utils.data import Dataset, DataLoader
 
 class LawDataset(Dataset):
     def __init__(self, jsonl_path, tokenizer, max_len):
-        self.rows = [json.loads(l) for l in open(jsonl_path)]
+        with open(jsonl_path, "r") as f:
+            self.rows = [json.loads(l) for l in f]
         self.tokenizer = tokenizer
         self.max_len = max_len
 
@@ -29,21 +30,16 @@ class LawDataset(Dataset):
 
 def make_dataloader(jsonl_path, tokenizer, max_len, batch_size, shuffle=True):
     ds = LawDataset(jsonl_path, tokenizer, max_len)
-    return DataLoader(ds, batch_size=batch_size, shuffle=shuffle)
-
+    return DataLoader(ds, batch_size=batch_size, shuffle=shuffle, num_workers=2, pin_memory=True)
 
 def compute_class_weights(jsonl_path, num_keys):
     counts = [0] * num_keys
-
     with open(jsonl_path, "r") as f:
         for line in f:
             row = json.loads(line)
             counts[row["key_label"]] += 1
-
     counts = torch.tensor(counts, dtype=torch.float)
     counts[counts == 0] = 1
-
     weights = 1.0 / counts
     weights = weights / weights.sum() * num_keys
-
     return weights

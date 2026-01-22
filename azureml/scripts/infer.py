@@ -2,12 +2,12 @@
 
 import json
 from pathlib import Path
+import torch
 from utils_infer import build_model, infer_provisions
 
 # -----------------------------
 # Paths & Configs
 # -----------------------------
-
 root = Path.cwd()  # repo root (LawCoding/)
 CONFIG_DIR = root / "azureml" / "configs"
 
@@ -71,6 +71,16 @@ predictions = infer_provisions(
     device=device
 )
 
+# -----------------------------
+# Convert logits to predicted labels
+# -----------------------------
+for row in predictions:
+    key_id = int(torch.tensor(row["key_logits"]).argmax().item())
+    row["predicted_key"] = str(key_id)  # string ID to match post-processing
+
+    deontic_id = int(torch.tensor(row["deontic_logits"]).argmax().item())
+    row["predicted_deontic"] = deontic_id
+
 print(f"Inference complete. Predicted {len(predictions)} rows.")
 
 # -----------------------------
@@ -83,3 +93,5 @@ with open(output_file, "w", encoding="utf-8") as f:
         f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 print(f"Predictions saved to: {output_file}")
+
+

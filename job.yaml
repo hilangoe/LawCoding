@@ -25,8 +25,8 @@ inputs:
 command: >
   python ./azureml/scripts/train.py
   --data_config ${{inputs.data_config}}
-  --training ${{inputs.training_config}}
-  --model ${{inputs.model_config}}
+  --training_config ${{inputs.training_config}}
+  --model_config ${{inputs.model_config}}
   --output_dir ${{outputs.adapters}}
 
 # Outputs
