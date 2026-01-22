@@ -1,0 +1,15 @@
+name: bert-lora-infer
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - torch>=2.0.0
+      - transformers>=4.35.0,4.42
+      - peft>=0.4.0
+      - tqdm
+      - numpy
+      - pandas
+

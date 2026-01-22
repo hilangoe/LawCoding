@@ -1,11 +1,10 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
 
-compute: lawcoding-dev
+compute: ML-compute
 code: .
 
 environment:
-  name: bert-lora-env
   image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
   conda_file: ./azureml/environment/conda.yaml
 
@@ -14,10 +13,10 @@ environment:
 inputs:
   data_config:
     type: uri_file
-    path: ./azureml/configs/data_dev.json
+    path: ./azureml/configs/data.json
   training_config:
     type: uri_file
-    path: ./azureml/configs/training_dev.json
+    path: ./azureml/configs/training.json
   model_config:
     type: uri_file
     path: ./azureml/configs/model.json
@@ -28,9 +27,9 @@ command: >
   --data_config ${{inputs.data_config}}
   --training ${{inputs.training_config}}
   --model ${{inputs.model_config}}
-  --output_dir ${{outputs.adapters_dev}}
+  --output_dir ${{outputs.adapters}}
 
 # Outputs
 outputs:
-  adapters_dev:
+  adapters:
     type: uri_folder
