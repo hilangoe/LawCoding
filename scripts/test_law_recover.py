@@ -2,18 +2,25 @@
 import json
 from pathlib import Path
 import argparse
+import os
 from test_prep_library import process_test_law
 
 # -----------------------------
 # CLI argument parsing
 # -----------------------------
-parser = argparse.ArgumentParser(description="Re-run Stage 1 for a single law PDF and append provisions.")
-parser.add_argument("law_id", type=str, help="Law ID to process, e.g., '(Guyana 1959)_01'")
+parser = argparse.ArgumentParser(
+    description="Re-run Stage 1 for a single law PDF and append provisions."
+)
+parser.add_argument(
+    "law_id",
+    type=str,
+    help="Law ID to process, e.g. '(Guyana 1959)_01'"
+)
 parser.add_argument(
     "--output",
     type=str,
     default="../data/test_provisions.jsonl",
-    help="Path to the output JSONL file (default: '../data/test_provisions.jsonl')"
+    help="Path to output JSONL file"
 )
 args = parser.parse_args()
 
@@ -27,7 +34,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 pdf_dir = BASE_DIR / "data" / "laws_pdf"
 model = "gpt-5-mini"
 
-pdf_path = pdf_dir / f"{law_id}.pdf"
+# -----------------------------
+# Find PDF (prefer English)
+# -----------------------------
+pdf_candidates = [
+    pdf_dir / f
+    for f in os.listdir(pdf_dir)
+    if law_id.lower() in f.lower() and f.lower().endswith(".pdf")
+]
+
+if not pdf_candidates:
+    print(f"No PDF found for law {law_id}")
+    exit(1)
+
+pdf_path = next(
+    (p for p in pdf_candidates if "ENG" in p.name.upper()),
+    pdf_candidates[0]
+)
 
 # -----------------------------
 # System instructions
@@ -72,14 +95,7 @@ The entire response must be a single JSON object and nothing else.
 """
 
 # -----------------------------
-# Ensure PDF exists
-# -----------------------------
-if not pdf_path.exists():
-    print(f"PDF not found for law {law_id} at {pdf_path}")
-    exit(1)
-
-# -----------------------------
-# Run Stage 1 for this law
+# Run Stage 1
 # -----------------------------
 provisions = process_test_law(
     pdf_path=str(pdf_path),
@@ -91,7 +107,7 @@ provisions = process_test_law(
 )
 
 # -----------------------------
-# Append to output file
+# Append output
 # -----------------------------
 if provisions:
     output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -99,4 +115,4 @@ if provisions:
         for prov in provisions:
             f.write(json.dumps(prov, ensure_ascii=False) + "\n")
 
-print(f"Processed {law_id}, extracted {len(provisions)} provisions, appended to {output_file}")
+print(f"Processed {law_id} ({pdf_path.name}), extracted {len(provisions)} provisions")
