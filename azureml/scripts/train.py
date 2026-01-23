@@ -72,7 +72,13 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path, output_dir):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = model.to(device)
 
-    optimizer = torch.optim.AdamW(model.parameters(), lr=LR)
+    # debug check
+    trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    total = sum(p.numel() for p in model.parameters())
+    print(f"Trainable params: {trainable:,} / {total:,}")
+
+    optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=LR)
+    
     ce_loss = nn.CrossEntropyLoss()
     ce_loss_key = nn.CrossEntropyLoss(weight=class_weights)
 
@@ -89,9 +95,7 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path, output_dir):
             deontic_label = batch["deontic_label"].to(device)
 
             # forward
-            outputs = model.base_model(input_ids=input_ids, attention_mask=attention_mask)
-            pooled = outputs.last_hidden_state[:, 0, :]  # CLS token
-            preds = model.classifier(pooled)
+            preds = model(input_ids=input_ids, attention_mask=attention_mask)
 
             # loss
             loss_key = ce_loss_key(preds["key_logits"], key_label)
@@ -105,7 +109,10 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path, output_dir):
             pbar.set_postfix({"loss": loss.item()})
 
     # saving model
-    model.base_model.save_pretrained(os.path.join(SAVE_DIR, "lora"))
+    if USE_LORA:
+        # saving LoRA adapter separately
+        model.base_model.save_pretrained(os.path.join(SAVE_DIR, "lora"))
+    
     torch.save(
         {
             "state_dict": model.classifier.state_dict(),

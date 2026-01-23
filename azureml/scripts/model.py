@@ -2,7 +2,7 @@
 import torch
 from torch import nn
 from transformers import AutoTokenizer, AutoModel
-from peft import LoraConfig, get_peft_model
+from peft import LoraConfig, get_peft_model, PeftModel
 
 class MultiHeadClassifier(nn.Module):
     def __init__(self, hidden_size, num_keys, num_deontic):
@@ -43,3 +43,32 @@ def build_model(base_name, num_keys, num_deontic, lora_cfg):
     model = CombinedModel(base, classifier)
 
     return tokenizer, model, hidden
+
+# specific model for using new adapters
+def load_trained_model(base_model_name, lora_dir, classifier_ckpt, device=None):
+    """
+    Load tokenizer + trained LoRA model + classifier for inference
+    """
+    device = device or ("cuda" if torch.cuda.is_available() else "cpu")
+
+    # Tokenizer + base
+    tokenizer = AutoTokenizer.from_pretrained(base_model_name)
+    base = AutoModel.from_pretrained(base_model_name)
+
+    # Load LoRA adapter
+    base = PeftModel.from_pretrained(base, lora_dir)
+
+    # Load classifier checkpoint
+    ckpt = torch.load(classifier_ckpt, map_location="cpu")
+    classifier = MultiHeadClassifier(
+        hidden_size=ckpt["hidden_size"],
+        num_keys=ckpt["num_keys"],
+        num_deontic=ckpt["num_deontic"]
+    )
+    classifier.load_state_dict(ckpt["state_dict"])
+
+    model = CombinedModel(base, classifier)
+    model.to(device)
+    model.eval()
+
+    return tokenizer, model, device

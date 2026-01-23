@@ -81,11 +81,16 @@ def load_trained_model(
     # loading trained LoRA adapters
     base = PeftModel.from_pretrained(base, lora_dir)
 
-    ckpt = torch.load(classifier_ckpt, map_location="cpu")
+    ckpt = torch.load(classifier_ckpt, map_location=device)
 
+    # in case the base model has not changed from training
+    hidden = base.config.hidden_size
+    assert hidden == ckpt["hidden_size"], "Base model hidden size does not match classifier checkpoint"
+
+    
     # defining the classifier
     classifier = MultiHeadClassifier(
-        hidden_size=ckpt["hidden_size"],
+        hidden_size=hidden,
         num_keys=ckpt["num_keys"],
         num_deontic=ckpt["num_deontic"]
     )

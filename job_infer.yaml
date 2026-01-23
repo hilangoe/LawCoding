@@ -1,37 +1,19 @@
-$schema: 
-https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
 
 compute: ML-compute
 code: .
 
 environment:
-  name: bert-lora-infer-env
   image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
   conda_file: ./azureml/environment/conda_test.yaml
-
-# Inputs
-inputs:
-  data_config:
-    type: uri_file
-    path: ./azureml/configs/data_infer.json
-  training_config:
-    type: uri_file
-    path: ./azureml/configs/training_infer.json
-  model_config:
-    type: uri_file
-    path: ./azureml/configs/model_infer.json
 
 # Command to run
 command: >
   python ./azureml/scripts/infer.py
-  --data_config ${{inputs.data_config}}
-  --training_config ${{inputs.training_config}}
-  --model_config ${{inputs.model_config}}
-  --output_dir ${{outputs.predictions}}
 
 # Outputs
 outputs:
   predictions:
     type: uri_folder
-
+    path: ./data/test_predictions

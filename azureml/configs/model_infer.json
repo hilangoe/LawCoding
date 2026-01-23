@@ -1,12 +1,14 @@
 {
   "base_model": "nlpaueb/legal-bert-base-uncased",
   "use_lora": true,
+  "classifier_ckpt": "data/checkpoints/classifier.pt",
   "lora": {
     "r": 16,
     "lora_alpha": 32,
     "lora_dropout": 0.1,
     "bias": "none",
-    "target_modules": ["query", "key", "value"]
+    "target_modules": ["query", "key", "value"],
+    "weights_path": "data/adapters/lora.pt"
   }
 }
 
