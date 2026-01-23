@@ -50,14 +50,21 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path, output_dir):
     USE_LORA = model_cfg.get("use_lora", True)
     LORA_CFG = model_cfg.get("lora", {})
 
+    # debugging
+    print("LORA_CFG before wrapping:", LORA_CFG)
+
     set_seed(train_cfg.get("seed", 42))
+
+    # training setup
+    device = "cuda" if torch.cuda.is_available() else "cpu"
 
     # building models
     tokenizer, model, hidden = build_model(
         base_name=BASE_MODEL,
         num_keys=num_keys,
         num_deontic=num_deontic,
-        lora_cfg=LORA_CFG if USE_LORA else {}
+        lora_cfg=LORA_CFG if USE_LORA else {},
+        device=device
     )
 
     # preparing dataset and loader
@@ -67,10 +74,6 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path, output_dir):
 
     # calculating class weights
     class_weights = compute_class_weights(train_file, num_keys).to("cuda" if torch.cuda.is_available() else "cpu")
-
-    # training setup
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = model.to(device)
 
     # debug check
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -110,8 +113,24 @@ def train_model(data_cfg_path, training_cfg_path, model_cfg_path, output_dir):
 
     # saving model
     if USE_LORA:
-        # saving LoRA adapter separately
-        model.base_model.save_pretrained(os.path.join(SAVE_DIR, "lora"))
+        from peft import get_peft_model_state_dict
+        
+        print("=== LoRA MANUAL SAVE ===")
+        lora_path = os.path.join(SAVE_DIR, "lora")
+        os.makedirs(lora_path, exist_ok=True)
+        
+        # 1. Save the config (This usually works fine on CPU)
+        model.base_model.save_pretrained(lora_path)
+        
+        # 2. Manually extract the LoRA-only state dict
+        # This filters the model for only the adapter weights (A and B matrices)
+        lora_weights = get_peft_model_state_dict(model.base_model)
+        
+        # 3. Explicitly save the bin file
+        torch.save(lora_weights, os.path.join(lora_path, "adapter_model.bin"))
+        
+        print(f"Success: Manually saved {len(lora_weights)} tensors to adapter_model.bin")
+        print("========================")
     
     torch.save(
         {
@@ -140,4 +159,3 @@ if __name__ == "__main__":
                 args.model_config,
                args.output_dir
     )
-
