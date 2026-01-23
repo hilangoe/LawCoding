@@ -1,5 +1,5 @@
 {
   "train_jsonl": "data/training_data.jsonl",
-  "metadata_path": "/data/metadata.json"
+  "metadata_path": "data/metadata.json"
 }
 

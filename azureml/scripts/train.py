@@ -151,8 +151,10 @@ if __name__ == "__main__":
     parser.add_argument("--data_config", type=str, required=True)
     parser.add_argument("--training_config", type=str, required=True)
     parser.add_argument("--model_config", type=str, required=True)
-    parser.add_argument("--output_dir", type=str, required=True)
+    parser.add_argument("--output_dir", type=str, default="./outputs")
     args = parser.parse_args()
+
+    os.makedirs(args.output_dir, exist_ok=True)
 
     train_model(args.data_config, 
                 args.training_config, 

@@ -3,12 +3,14 @@ import json
 from pathlib import Path
 import argparse
 import torch
+import os
 from utils_infer import load_trained_model, infer_provisions
 
 # -----------------------------
 # Parse arguments
 # -----------------------------
 parser = argparse.ArgumentParser()
+parser.add_argument("--model_weights_path", type=str, help="Path to adapters folder")
 parser.add_argument("--data_config", type=str, required=True)
 parser.add_argument("--model_config", type=str, required=True)
 parser.add_argument("--inference_config", type=str, required=True)
@@ -46,34 +48,43 @@ print(f"Loaded {len(provisions)} provisions for inference.")
 # -----------------------------
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
+# #### new directory structure created during training.
+lora_path = os.path.join(args.model_weights_path, "lora")
+classifier_path = os.path.join(args.model_weights_path, "classifier.pt")
+
 tokenizer, model, _ = load_trained_model(
     base_model_name=model_cfg["base_model"],
-    lora_dir=model_cfg["lora"]["weights_path"],
-    classifier_ckpt=model_cfg["classifier_ckpt"],
+    lora_dir=lora_path,
+    classifier_ckpt=classifier_path,
     device=device
 )
 
 # -----------------------------
 # Running inference
 # -----------------------------
-predictions = infer_provisions(
-    provisions=provisions,
-    tokenizer=tokenizer,
-    model=model,
-    device=device,
-    batch_size=batch_size,
-    max_len=max_len
-)
+# added model.eval() and torch.no_grad() to ensure weights aren't updated and memory is optimized
+model.eval()
+with torch.no_grad():
+    predictions = infer_provisions(
+        provisions=provisions,
+        tokenizer=tokenizer,
+        model=model,
+        device=device,
+        batch_size=batch_size,
+        max_len=max_len
+    )
 
 # -----------------------------
 # Converting logits to predicted labels
 # -----------------------------
 for row in predictions:
-    row["predicted_key"] = str(
-        int(torch.tensor(row["key_logits"]).argmax().item())
+    # added .cpu() before .argmax() to ensure safety if running on GPU.
+    # using torch.as_tensor() because it is more efficient since data is already a list/array.
+    row["predicted_key"] = int(
+        torch.as_tensor(row["key_logits"]).cpu().argmax().item()
     )
     row["predicted_deontic"] = int(
-        torch.tensor(row["deontic_logits"]).argmax().item()
+        torch.as_tensor(row["deontic_logits"]).cpu().argmax().item()
     )
 
 print(f"Inference complete. Predicted {len(predictions)} rows.")

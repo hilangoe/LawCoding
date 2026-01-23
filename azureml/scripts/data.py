@@ -4,10 +4,25 @@ from torch.utils.data import Dataset, DataLoader
 
 class LawDataset(Dataset):
     def __init__(self, jsonl_path, tokenizer, max_len):
-        with open(jsonl_path, "r") as f:
-            self.rows = [json.loads(l) for l in f]
         self.tokenizer = tokenizer
         self.max_len = max_len
+
+        with open(jsonl_path, "r") as f:
+            # filtering out rows with missing labels or empty lines
+            all_rows = []
+            for line in f:
+                if not line.strip():
+                    continue
+                row = json.loads(line)
+                # ensuring both labels and text exist before adding to the dataset
+                if row.get("key_label") is not None and \
+                   row.get("deontic_label") is not None and \
+                   row.get("text") is not None:
+                    all_rows.append(row)
+            
+            self.rows = all_rows
+
+        print(f"Loaded {len(self.rows)} valid rows from {jsonl_path}")
 
     def __len__(self):
         return len(self.rows)
@@ -36,8 +51,21 @@ def compute_class_weights(jsonl_path, num_keys):
     counts = [0] * num_keys
     with open(jsonl_path, "r") as f:
         for line in f:
+            if not line.strip(): 
+                continue 
             row = json.loads(line)
-            counts[row["key_label"]] += 1
+            
+            # #### FIX 2: Match the filtering logic of LawDataset exactly ####
+            if row.get("key_label") is not None and \
+               row.get("deontic_label") is not None and \
+               row.get("text") is not None:
+                
+                label = row["key_label"]
+                if label < num_keys: # Safety check for index range
+                    counts[label] += 1
+            else:
+                # We skip silently or log once; LawDataset already warns on load
+                pass
     counts = torch.tensor(counts, dtype=torch.float)
     counts[counts == 0] = 1
     weights = 1.0 / counts

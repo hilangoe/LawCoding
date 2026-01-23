@@ -81,11 +81,26 @@ def load_trained_model(
     # loading trained LoRA adapters
     base = PeftModel.from_pretrained(base, lora_dir)
 
+    # ensuring we load the checkpoint and check for expected keys
     ckpt = torch.load(classifier_ckpt, map_location=device)
+
+    # added a check for the new dictionary structure saved in training
+    # In your previous training script, you saved a dict with 'state_dict', 'hidden_size', etc.
+    if "state_dict" in ckpt:
+        hidden = ckpt["hidden_size"]
+        num_keys = ckpt["num_keys"]
+        num_deontic = ckpt["num_deontic"]
+        state_dict = ckpt["state_dict"]
+    else:
+        # fallback if you only saved the state_dict directly
+        hidden = base.config.hidden_size
+        num_keys = 253 
+        num_deontic = 2 
+        state_dict = ckpt
 
     # in case the base model has not changed from training
     hidden = base.config.hidden_size
-    assert hidden == ckpt["hidden_size"], "Base model hidden size does not match classifier checkpoint"
+    assert hidden_actual == hidden, f"Base model hidden size {hidden_actual} != checkpoint {hidden}"
 
     
     # defining the classifier
@@ -94,7 +109,9 @@ def load_trained_model(
         num_keys=ckpt["num_keys"],
         num_deontic=ckpt["num_deontic"]
     )
-    classifier.load_state_dict(ckpt["state_dict"])
+    
+    # using state_dict variable defined above
+    classifier.load_state_dict(state_dict)
 
     model = CombinedModel(base, classifier)
     model.to(device)
@@ -156,11 +173,12 @@ def infer_provisions(
         deontic_logits = preds["deontic_logits"].cpu()
 
         for j, prov in enumerate(batch):
-            outputs.append({
-                "law_id": prov.get("law_id"),
-                "text": prov.get("text"),
+            # safer dict merge to preserve all original fields
+            res = prov.copy()
+            res.update({
                 "key_logits": key_logits[j].tolist(),
                 "deontic_logits": deontic_logits[j].tolist(),
             })
+            outputs.append(res)
 
     return outputs
