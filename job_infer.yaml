@@ -1,7 +1,7 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
 
-compute: ML-compute
+compute: azureml:lawcoding-dev
 code: .
 
 environment:
@@ -17,10 +17,10 @@ inputs:
 
   data_config:
     type: uri_file
-    path: ./azureml/configs/data.json
+    path: ./azureml/configs/data_infer.json
   model_config:
     type: uri_file
-    path: ./azureml/configs/model.json
+    path: ./azureml/configs/model_infer.json
   inference_config:
     type: uri_file
     path: ./azureml/configs/inference.json

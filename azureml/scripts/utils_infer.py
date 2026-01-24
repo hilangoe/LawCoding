@@ -62,62 +62,68 @@ def load_trained_model(
     ----------
     base_model_name : str
         HuggingFace base model (e.g. bert-base-uncased)
-
     lora_dir : str
         Path to saved LoRA adapter directory
-
     classifier_ckpt : str
         Path to classifier.pt checkpoint
-
     device : str, optional
         "cuda" or "cpu"
     """
     device = device or ("cuda" if torch.cuda.is_available() else "cpu")
 
-    # grabbing tokenizer and base model
+    # -----------------------------
+    # Load base model and tokenizer
+    # -----------------------------
     tokenizer = AutoTokenizer.from_pretrained(base_model_name)
     base = AutoModel.from_pretrained(base_model_name)
 
-    # loading trained LoRA adapters
+    # -----------------------------
+    # Load LoRA adapters
+    # -----------------------------
     base = PeftModel.from_pretrained(base, lora_dir)
 
-    # ensuring we load the checkpoint and check for expected keys
+    # -----------------------------
+    # Load classifier checkpoint
+    # -----------------------------
     ckpt = torch.load(classifier_ckpt, map_location=device)
 
-    # added a check for the new dictionary structure saved in training
-    # In your previous training script, you saved a dict with 'state_dict', 'hidden_size', etc.
     if "state_dict" in ckpt:
-        hidden = ckpt["hidden_size"]
+        hidden_ckpt = ckpt["hidden_size"]
         num_keys = ckpt["num_keys"]
         num_deontic = ckpt["num_deontic"]
         state_dict = ckpt["state_dict"]
     else:
-        # fallback if you only saved the state_dict directly
-        hidden = base.config.hidden_size
-        num_keys = 253 
-        num_deontic = 2 
+        # fallback if only state_dict was saved directly
+        hidden_ckpt = base.config.hidden_size
+        num_keys = 253
+        num_deontic = 2
         state_dict = ckpt
 
-    # in case the base model has not changed from training
-    hidden = base.config.hidden_size
-    assert hidden_actual == hidden, f"Base model hidden size {hidden_actual} != checkpoint {hidden}"
+    # -----------------------------
+    # Verify hidden size matches base model
+    # -----------------------------
+    hidden_actual = base.config.hidden_size
+    assert hidden_actual == hidden_ckpt, f"Base model hidden size {hidden_actual} != checkpoint {hidden_ckpt}"
 
-    
-    # defining the classifier
+    # -----------------------------
+    # Instantiate classifier and load weights
+    # -----------------------------
     classifier = MultiHeadClassifier(
-        hidden_size=hidden,
-        num_keys=ckpt["num_keys"],
-        num_deontic=ckpt["num_deontic"]
+        hidden_size=hidden_actual,
+        num_keys=num_keys,
+        num_deontic=num_deontic
     )
-    
-    # using state_dict variable defined above
     classifier.load_state_dict(state_dict)
 
+    # -----------------------------
+    # Combine base + classifier
+    # -----------------------------
     model = CombinedModel(base, classifier)
     model.to(device)
     model.eval()
 
     return tokenizer, model, device
+
 
 # ---------------------------------------------------------------------
 # Inference

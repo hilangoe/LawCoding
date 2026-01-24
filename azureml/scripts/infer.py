@@ -52,6 +52,22 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 lora_path = os.path.join(args.model_weights_path, "lora")
 classifier_path = os.path.join(args.model_weights_path, "classifier.pt")
 
+# -----------------------------
+# DEBUG: Check that input files exist
+# -----------------------------
+print(f"Debug: model_weights_path = {args.model_weights_path}")
+print(f"Debug: classifier_path = {classifier_path}")
+print(f"Debug: lora_path = {lora_path}")
+
+if not os.path.isfile(classifier_path):
+    print("WARNING: classifier.pt not found!")
+
+if not os.path.isdir(lora_path):
+    print("WARNING: lora folder not found!")
+else:
+    lora_files = os.listdir(lora_path)
+    print(f"Found {len(lora_files)} files in lora folder: {lora_files}")
+
 tokenizer, model, _ = load_trained_model(
     base_model_name=model_cfg["base_model"],
     lora_dir=lora_path,

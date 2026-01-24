@@ -1,0 +1,283 @@
+2026-01-22 11:18:58,098 | INFO | --- Processing law: (Chile 2001)_01 ---
+2026-01-22 11:20:36,436 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:20:36,825 | INFO | Law (Chile 2001)_01 processed: 49 provisions extracted
+2026-01-22 11:20:36,825 | INFO | --- Processing law: (Hungary 2012)_01 ---
+2026-01-22 11:20:37,091 | WARNING | Law (Hungary 2012)_01: No provisions extracted from Stage 1.
+2026-01-22 11:20:37,091 | INFO | --- Processing law: (Malawi 2023)_01 ---
+2026-01-22 11:23:08,554 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:23:08,566 | INFO | Law (Malawi 2023)_01 processed: 103 provisions extracted
+2026-01-22 11:23:08,566 | INFO | --- Processing law: (Sierra Leone 2021)_01 ---
+2026-01-22 11:24:17,345 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:25:15,086 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:25:15,092 | INFO | Law (Sierra Leone 2021)_01 processed: 24 provisions extracted
+2026-01-22 11:25:15,093 | INFO | --- Processing law: (Tajikistan 2021)_01 ---
+2026-01-22 11:27:11,325 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:27:11,374 | INFO | Law (Tajikistan 2021)_01 processed: 154 provisions extracted
+2026-01-22 11:27:11,374 | INFO | --- Processing law: (Hungary 2021)_01 ---
+2026-01-22 11:30:26,935 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:30:26,942 | INFO | Law (Hungary 2021)_01 processed: 143 provisions extracted
+2026-01-22 11:30:26,942 | INFO | --- Processing law: (Hungary 2020)_01 ---
+2026-01-22 11:31:31,922 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:31:31,933 | INFO | Law (Hungary 2020)_01 processed: 31 provisions extracted
+2026-01-22 11:31:31,933 | INFO | --- Processing law: (Venezuela 2000)_02 ---
+2026-01-22 11:35:45,263 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:38:36,474 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:38:36,498 | INFO | Law (Venezuela 2000)_02 processed: 591 provisions extracted
+2026-01-22 11:38:36,499 | INFO | --- Processing law: (African Union 1981)_01 ---
+2026-01-22 11:40:25,428 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:40:25,443 | INFO | Law (African Union 1981)_01 processed: 112 provisions extracted
+2026-01-22 11:40:25,443 | INFO | --- Processing law: (Pakistan 2020)_01 ---
+2026-01-22 11:41:53,888 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 11:41:53,894 | INFO | Law (Pakistan 2020)_01 processed: 64 provisions extracted
+2026-01-22 11:41:53,895 | INFO | --- Processing law: (Bhutan 2008)_01 ---
+2026-01-22 11:52:05,725 | INFO | Retrying request to /responses in 0.426957 seconds
+2026-01-22 11:52:47,860 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:02:47,914 | INFO | Retrying request to /responses in 0.420969 seconds
+2026-01-22 12:07:13,060 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:09:25,570 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:09:25,665 | INFO | Law (Bhutan 2008)_01 processed: 492 provisions extracted
+2026-01-22 12:09:25,681 | INFO | --- Processing law: (Laos 2014)_01 ---
+2026-01-22 12:10:35,418 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:10:35,433 | INFO | Law (Laos 2014)_01 processed: 64 provisions extracted
+2026-01-22 12:10:35,433 | INFO | --- Processing law: (Venezuela 2000)_01 ---
+2026-01-22 12:15:33,134 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:20:12,896 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:23:11,567 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:23:11,580 | INFO | Law (Venezuela 2000)_01 processed: 971 provisions extracted
+2026-01-22 12:23:11,580 | INFO | --- Processing law: (Zambia 2025)_01 ---
+2026-01-22 12:24:59,255 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:24:59,270 | INFO | Law (Zambia 2025)_01 processed: 161 provisions extracted
+2026-01-22 12:24:59,270 | INFO | --- Processing law: (Poland 2004)_01 ---
+2026-01-22 12:24:59,271 | WARNING | (Poland 2004)_01 - No PDF found, skipping.
+2026-01-22 12:24:59,271 | INFO | --- Processing law: (Hungary 2011)_01 ---
+2026-01-22 12:26:24,929 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:28:36,749 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:28:36,817 | INFO | Law (Hungary 2011)_01 processed: 268 provisions extracted
+2026-01-22 12:28:36,824 | INFO | --- Processing law: (Algeria 2006)_01 ---
+2026-01-22 12:30:13,791 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:31:40,717 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:31:40,738 | INFO | Law (Algeria 2006)_01 processed: 82 provisions extracted
+2026-01-22 12:31:40,739 | INFO | --- Processing law: (Thailand 2007)_01 ---
+2026-01-22 12:32:55,475 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:32:55,492 | INFO | Law (Thailand 2007)_01 processed: 82 provisions extracted
+2026-01-22 12:32:55,492 | INFO | --- Processing law: (Nicaragua 2020)_01 ---
+2026-01-22 12:34:42,849 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:34:42,874 | INFO | Law (Nicaragua 2020)_01 processed: 130 provisions extracted
+2026-01-22 12:34:42,874 | INFO | --- Processing law: (Zimbabwe 2020)_01 ---
+2026-01-22 12:36:28,178 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:36:28,193 | INFO | Law (Zimbabwe 2020)_01 processed: 65 provisions extracted
+2026-01-22 12:36:28,193 | INFO | --- Processing law: (Guyana 1959)_01 ---
+2026-01-22 12:36:31,715 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 400 Bad Request"
+2026-01-22 12:36:31,721 | ERROR | Chunk 1 failed: Error code: 400 - {'error': {'message': 'The response was filtered due to the prompt triggering Azure OpenAI’s content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'content_filter', 'content_filters': [{'blocked': True, 'source_type': 'prompt', 'content_filter_raw': None, 'content_filter_results': {'hate': {'filtered': False, 'severity': 'safe'}, 'violence': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': False, 'severity': 'safe'}, 'jailbreak': {'filtered': True, 'detected': True}, 'self_harm': {'filtered': False, 'severity': 'safe'}}, 'content_filter_offsets': {'start_offset': 1337, 'end_offset': 2374, 'check_offset': 0}}]}}
+Traceback (most recent call last):
+  File "/Users/hans-ingelang/Dropbox/Projects/LawCoding/scripts/test_prep_library.py", line 121, in split_law
+    response = client.responses.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/resources/responses/responses.py", line 866, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'The response was filtered due to the prompt triggering Azure OpenAI’s content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'content_filter', 'content_filters': [{'blocked': True, 'source_type': 'prompt', 'content_filter_raw': None, 'content_filter_results': {'hate': {'filtered': False, 'severity': 'safe'}, 'violence': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': False, 'severity': 'safe'}, 'jailbreak': {'filtered': True, 'detected': True}, 'self_harm': {'filtered': False, 'severity': 'safe'}}, 'content_filter_offsets': {'start_offset': 1337, 'end_offset': 2374, 'check_offset': 0}}]}}
+2026-01-22 12:36:31,761 | WARNING | Law (Guyana 1959)_01: No provisions extracted from Stage 1.
+2026-01-22 12:36:31,761 | INFO | --- Processing law: (El Salvador 1997)_02 ---
+2026-01-22 12:40:16,369 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:45:12,918 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:46:04,382 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:46:04,396 | INFO | Law (El Salvador 1997)_02 processed: 688 provisions extracted
+2026-01-22 12:46:04,396 | INFO | --- Processing law: (Algeria 1995)_01 ---
+2026-01-22 12:47:17,274 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:47:17,289 | INFO | Law (Algeria 1995)_01 processed: 81 provisions extracted
+2026-01-22 12:47:17,289 | INFO | --- Processing law: (El Salvador 2024)_01 ---
+2026-01-22 12:49:25,637 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 12:49:25,649 | INFO | Law (El Salvador 2024)_01 processed: 146 provisions extracted
+2026-01-22 12:49:25,649 | INFO | --- Processing law: (Bolivia 2010)_01 ---
+2026-01-22 12:50:46,809 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 13:00:46,858 | INFO | Retrying request to /responses in 0.485237 seconds
+2026-01-22 13:10:47,576 | INFO | Retrying request to /responses in 0.751397 seconds
+2026-01-22 13:20:48,660 | ERROR | Chunk 2 failed: Request timed out.
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hans-ingelang/Dropbox/Projects/LawCoding/scripts/test_prep_library.py", line 121, in split_law
+    try:
+         
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/resources/responses/responses.py", line 866, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1000, in request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+2026-01-22 13:22:04,446 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 13:25:30,166 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 13:35:30,296 | INFO | Retrying request to /responses in 0.413271 seconds
+2026-01-22 13:39:40,160 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 13:41:30,140 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 13:41:30,172 | INFO | Law (Bolivia 2010)_01 processed: 554 provisions extracted
+2026-01-22 13:41:30,177 | INFO | --- Processing law: (Guyana 1997)_01 ---
+2026-01-22 13:43:24,828 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 13:43:24,844 | INFO | Law (Guyana 1997)_01 processed: 121 provisions extracted
+2026-01-22 13:43:24,845 | INFO | --- Processing law: (South Sudan 2013)_01 ---
+2026-01-22 13:43:24,916 | WARNING | Law (South Sudan 2013)_01: No provisions extracted from Stage 1.
+2026-01-22 13:43:24,916 | INFO | --- Processing law: (Malawi 2017)_01 ---
+2026-01-22 13:46:36,729 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 13:56:36,845 | INFO | Retrying request to /responses in 0.490272 seconds
+2026-01-22 14:06:37,541 | INFO | Retrying request to /responses in 0.834404 seconds
+2026-01-22 14:16:38,582 | ERROR | Chunk 2 failed: Request timed out.
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hans-ingelang/Dropbox/Projects/LawCoding/scripts/test_prep_library.py", line 121, in split_law
+    try:
+         
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/resources/responses/responses.py", line 866, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1000, in request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+2026-01-22 14:19:23,019 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 14:19:23,200 | INFO | Law (Malawi 2017)_01 processed: 472 provisions extracted
+2026-01-22 14:19:23,202 | INFO | --- Processing law: (Kenya 2018)_01 ---
+2026-01-22 14:23:14,049 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 14:23:14,170 | INFO | Law (Kenya 2018)_01 processed: 71 provisions extracted
+2026-01-22 14:23:14,170 | INFO | --- Processing law: (Angola 2020)_01 ---
+2026-01-22 14:26:06,052 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 14:27:10,324 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 14:30:57,429 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 14:34:38,568 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-01-22 14:34:38,601 | INFO | Law (Angola 2020)_01 processed: 287 provisions extracted
+2026-01-22 14:34:38,608 | INFO | Stage 1 complete. Total provisions extracted: 6006
+2026-01-22 14:34:39,012 | INFO | Stage 1: 30 laws processed, 6006 provisions extracted
+2026-01-22 14:34:39,012 | INFO | Saved provisions to: /Users/hans-ingelang/Dropbox/Projects/LawCoding/data/test_provisions.jsonl
