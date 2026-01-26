@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "input_file": "/Users/hans-ingelang/Dropbox/Projects/LawCoding/data/test_data_merged.csv",
+  "key_precision": 0.12128712871287128,
+  "key_recall": 0.1891891891891892,
+  "key_f1": 0.1478129713423831,
+  "deontic_accuracy": 0.9387755102040817,
+  "cohen_kappa": -0.027972027972027913,
+  "total_rows": 16906,
+  "rows_deontic_eval": 49
+}
