@@ -38,6 +38,20 @@ elif merged_jsonl_path.exists():
 else:
     raise FileNotFoundError("Merged output not found!")
 
+# -----------------------------
+# Drop problematic laws upfront
+# -----------------------------
+DROP_LAWS = {
+    "(Algeria 1995)_01",
+    "(Algeria 2006)_01",
+}
+
+initial_rows = len(df)
+df = df[~df["law_id"].isin(DROP_LAWS)]
+dropped_rows = initial_rows - len(df)
+
+print(f"Dropped {dropped_rows} rows from excluded law_ids: {DROP_LAWS}")
+
 print(f"Total rows: {len(df)}")
 print(df.head())
 

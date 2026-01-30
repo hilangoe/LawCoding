@@ -1,91 +1,91 @@
 [
   {
     "key":"C_EXPRESS_ORDER",
-    "human_found":5,
-    "model_found":26,
-    "agreement_found":4,
+    "human_found":3,
+    "model_found":24,
+    "agreement_found":2,
     "analysis_version":"v1",
     "human_only":1,
     "model_only":22,
-    "precision":0.1538461538,
-    "recall":0.8
+    "precision":0.0833333333,
+    "recall":0.6666666667
   },
   {
     "key":"GOV_REGULATOR",
     "human_found":7,
-    "model_found":26,
+    "model_found":24,
     "agreement_found":6,
     "analysis_version":"v1",
     "human_only":1,
-    "model_only":20,
-    "precision":0.2307692308,
+    "model_only":18,
+    "precision":0.25,
     "recall":0.8571428571
   },
   {
     "key":"C_EXPRESS_OBSCENE",
-    "human_found":7,
-    "model_found":22,
-    "agreement_found":6,
+    "human_found":5,
+    "model_found":20,
+    "agreement_found":4,
     "analysis_version":"v1",
     "human_only":1,
     "model_only":16,
-    "precision":0.2727272727,
-    "recall":0.8571428571
+    "precision":0.2,
+    "recall":0.8
+  },
+  {
+    "key":"C_EXPRESS_NATSEC",
+    "human_found":4,
+    "model_found":17,
+    "agreement_found":2,
+    "analysis_version":"v1",
+    "human_only":2,
+    "model_only":15,
+    "precision":0.1176470588,
+    "recall":0.5
   },
   {
     "key":"GOV_OVERSIGHT",
     "human_found":6,
-    "model_found":21,
+    "model_found":20,
     "agreement_found":6,
     "analysis_version":"v1",
     "human_only":0,
-    "model_only":15,
-    "precision":0.2857142857,
-    "recall":1.0
-  },
-  {
-    "key":"C_EXPRESS_NATSEC",
-    "human_found":6,
-    "model_found":19,
-    "agreement_found":4,
-    "analysis_version":"v1",
-    "human_only":2,
-    "model_only":15,
-    "precision":0.2105263158,
-    "recall":0.6666666667
-  },
-  {
-    "key":"GOV_WARRANT",
-    "human_found":3,
-    "model_found":16,
-    "agreement_found":2,
-    "analysis_version":"v1",
-    "human_only":1,
     "model_only":14,
-    "precision":0.125,
-    "recall":0.6666666667
+    "precision":0.3,
+    "recall":1.0
   },
   {
     "key":"C_DISINFO_RIGHTS",
     "human_found":3,
-    "model_found":14,
+    "model_found":13,
     "agreement_found":0,
     "analysis_version":"v1",
     "human_only":3,
-    "model_only":14,
+    "model_only":13,
     "precision":0.0,
     "recall":0.0
   },
   {
     "key":"C_EXPRESS_RELIGION",
-    "human_found":7,
-    "model_found":17,
-    "agreement_found":5,
+    "human_found":5,
+    "model_found":15,
+    "agreement_found":3,
     "analysis_version":"v1",
     "human_only":2,
     "model_only":12,
-    "precision":0.2941176471,
-    "recall":0.7142857143
+    "precision":0.2,
+    "recall":0.6
+  },
+  {
+    "key":"GOV_WARRANT",
+    "human_found":3,
+    "model_found":14,
+    "agreement_found":2,
+    "analysis_version":"v1",
+    "human_only":1,
+    "model_only":12,
+    "precision":0.1428571429,
+    "recall":0.6666666667
   },
   {
     "key":"IM_PREVENTION",
@@ -100,39 +100,39 @@
   },
   {
     "key":"C_EXPRESS_REPUTATION",
-    "human_found":5,
-    "model_found":16,
-    "agreement_found":5,
+    "human_found":3,
+    "model_found":14,
+    "agreement_found":3,
     "analysis_version":"v1",
     "human_only":0,
     "model_only":11,
-    "precision":0.3125,
+    "precision":0.2142857143,
     "recall":1.0
   },
   {
     "key":"C_EXPRESS_PROPERTY",
-    "human_found":5,
+    "human_found":3,
     "model_found":11,
     "agreement_found":1,
     "analysis_version":"v1",
-    "human_only":4,
+    "human_only":2,
     "model_only":10,
     "precision":0.0909090909,
-    "recall":0.2
+    "recall":0.3333333333
   },
   {
-    "key":"I_DISINFO_INFRA",
+    "key":"C_DISINFO_HISTORY",
     "human_found":0,
-    "model_found":8,
+    "model_found":7,
     "agreement_found":0,
     "analysis_version":"v1",
     "human_only":0,
-    "model_only":8,
+    "model_only":7,
     "precision":0.0,
     "recall":null
   },
   {
-    "key":"C_DISINFO_HISTORY",
+    "key":"I_DISINFO_INFRA",
     "human_found":0,
     "model_found":7,
     "agreement_found":0,
@@ -150,28 +150,6 @@
     "analysis_version":"v1",
     "human_only":0,
     "model_only":7,
-    "precision":0.0,
-    "recall":null
-  },
-  {
-    "key":"I_EXPRESS_CONFIDENCE",
-    "human_found":0,
-    "model_found":6,
-    "agreement_found":0,
-    "analysis_version":"v1",
-    "human_only":0,
-    "model_only":6,
-    "precision":0.0,
-    "recall":null
-  },
-  {
-    "key":"P_EXPRESS_CLASSIFIED",
-    "human_found":0,
-    "model_found":6,
-    "agreement_found":0,
-    "analysis_version":"v1",
-    "human_only":0,
-    "model_only":6,
     "precision":0.0,
     "recall":null
   },
@@ -198,7 +176,7 @@
     "recall":null
   },
   {
-    "key":"I_EXPRESS_ORDER",
+    "key":"I_EXPRESS_CONFIDENCE",
     "human_found":0,
     "model_found":5,
     "agreement_found":0,
@@ -209,18 +187,7 @@
     "recall":null
   },
   {
-    "key":"P_DISINFO_ECON",
-    "human_found":0,
-    "model_found":5,
-    "agreement_found":0,
-    "analysis_version":"v1",
-    "human_only":0,
-    "model_only":5,
-    "precision":0.0,
-    "recall":null
-  },
-  {
-    "key":"P_DISINFO_INFRA",
+    "key":"P_EXPRESS_CLASSIFIED",
     "human_found":0,
     "model_found":5,
     "agreement_found":0,
@@ -254,11 +221,11 @@
   },
   {
     "key":"C_DISINFO_ECON",
-    "human_found":3,
+    "human_found":1,
     "model_found":4,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":3,
+    "human_only":1,
     "model_only":4,
     "precision":0.0,
     "recall":0.0
@@ -275,18 +242,7 @@
     "recall":null
   },
   {
-    "key":"IM_CORRECT",
-    "human_found":1,
-    "model_found":4,
-    "agreement_found":0,
-    "analysis_version":"v1",
-    "human_only":1,
-    "model_only":4,
-    "precision":0.0,
-    "recall":0.0
-  },
-  {
-    "key":"I_DISINFO_UNITY",
+    "key":"I_EXPRESS_ORDER",
     "human_found":0,
     "model_found":4,
     "agreement_found":0,
@@ -308,7 +264,18 @@
     "recall":null
   },
   {
-    "key":"I_MISINFO_UNITY",
+    "key":"P_DISINFO_ECON",
+    "human_found":0,
+    "model_found":4,
+    "agreement_found":0,
+    "analysis_version":"v1",
+    "human_only":0,
+    "model_only":4,
+    "precision":0.0,
+    "recall":null
+  },
+  {
+    "key":"P_DISINFO_INFRA",
     "human_found":0,
     "model_found":4,
     "agreement_found":0,
@@ -331,6 +298,17 @@
   },
   {
     "key":"C_DISINFO_GOVCRITIC",
+    "human_found":0,
+    "model_found":3,
+    "agreement_found":0,
+    "analysis_version":"v1",
+    "human_only":0,
+    "model_only":3,
+    "precision":0.0,
+    "recall":null
+  },
+  {
+    "key":"IM_CORRECT",
     "human_found":1,
     "model_found":3,
     "agreement_found":0,
@@ -341,15 +319,37 @@
     "recall":0.0
   },
   {
-    "key":"PRESS_CORRECT",
-    "human_found":2,
+    "key":"I_DISINFO_UNITY",
+    "human_found":0,
     "model_found":3,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":2,
+    "human_only":0,
     "model_only":3,
     "precision":0.0,
-    "recall":0.0
+    "recall":null
+  },
+  {
+    "key":"I_MISINFO_UNITY",
+    "human_found":0,
+    "model_found":3,
+    "agreement_found":0,
+    "analysis_version":"v1",
+    "human_only":0,
+    "model_only":3,
+    "precision":0.0,
+    "recall":null
+  },
+  {
+    "key":"PRESS_CORRECT",
+    "human_found":0,
+    "model_found":3,
+    "agreement_found":0,
+    "analysis_version":"v1",
+    "human_only":0,
+    "model_only":3,
+    "precision":0.0,
+    "recall":null
   },
   {
     "key":"PRESS_OVERSIGHT",
@@ -408,14 +408,14 @@
   },
   {
     "key":"C_EXPRESS_HATE",
-    "human_found":9,
+    "human_found":7,
     "model_found":3,
     "agreement_found":1,
     "analysis_version":"v1",
-    "human_only":8,
+    "human_only":6,
     "model_only":2,
     "precision":0.3333333333,
-    "recall":0.1111111111
+    "recall":0.1428571429
   },
   {
     "key":"P_DISINFO_GEN",
@@ -430,11 +430,11 @@
   },
   {
     "key":"C_DISINFO_HATE",
-    "human_found":3,
+    "human_found":1,
     "model_found":2,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":3,
+    "human_only":1,
     "model_only":2,
     "precision":0.0,
     "recall":0.0
@@ -474,33 +474,33 @@
   },
   {
     "key":"C_EXPRESS_CLASSIFIED",
-    "human_found":4,
+    "human_found":2,
     "model_found":2,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":4,
+    "human_only":2,
     "model_only":2,
     "precision":0.0,
     "recall":0.0
   },
   {
     "key":"C_EXPRESS_GOVCRITIC",
-    "human_found":4,
+    "human_found":2,
     "model_found":2,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":4,
+    "human_only":2,
     "model_only":2,
     "precision":0.0,
     "recall":0.0
   },
   {
     "key":"C_EXPRESS_GOVLEGIT",
-    "human_found":3,
+    "human_found":1,
     "model_found":2,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":3,
+    "human_only":1,
     "model_only":2,
     "precision":0.0,
     "recall":0.0
@@ -649,28 +649,6 @@
     "recall":0.0
   },
   {
-    "key":"P_MISINFO_GOVCRITIC",
-    "human_found":0,
-    "model_found":2,
-    "agreement_found":0,
-    "analysis_version":"v1",
-    "human_only":0,
-    "model_only":2,
-    "precision":0.0,
-    "recall":null
-  },
-  {
-    "key":"P_MISINFO_HEALTHOFF",
-    "human_found":0,
-    "model_found":2,
-    "agreement_found":0,
-    "analysis_version":"v1",
-    "human_only":0,
-    "model_only":2,
-    "precision":0.0,
-    "recall":null
-  },
-  {
     "key":"IM_OVERSIGHT",
     "human_found":7,
     "model_found":3,
@@ -727,22 +705,22 @@
   },
   {
     "key":"C_EXPRESS_LIFE",
-    "human_found":5,
+    "human_found":3,
     "model_found":1,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":5,
+    "human_only":3,
     "model_only":1,
     "precision":0.0,
     "recall":0.0
   },
   {
     "key":"C_EXPRESS_MORAL",
-    "human_found":4,
+    "human_found":2,
     "model_found":1,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":4,
+    "human_only":2,
     "model_only":1,
     "precision":0.0,
     "recall":0.0
@@ -782,17 +760,6 @@
   },
   {
     "key":"I_EXPRESS_CLASSIFIED",
-    "human_found":0,
-    "model_found":1,
-    "agreement_found":0,
-    "analysis_version":"v1",
-    "human_only":0,
-    "model_only":1,
-    "precision":0.0,
-    "recall":null
-  },
-  {
-    "key":"I_EXPRESS_GOVCRITIC",
     "human_found":0,
     "model_found":1,
     "agreement_found":0,
@@ -891,17 +858,6 @@
     "recall":null
   },
   {
-    "key":"P_DISINFO_NATSEC",
-    "human_found":0,
-    "model_found":1,
-    "agreement_found":0,
-    "analysis_version":"v1",
-    "human_only":0,
-    "model_only":1,
-    "precision":0.0,
-    "recall":null
-  },
-  {
     "key":"P_DISINFO_ORDER",
     "human_found":1,
     "model_found":1,
@@ -925,11 +881,11 @@
   },
   {
     "key":"P_EXPRESS_GOVCRITIC",
-    "human_found":3,
+    "human_found":2,
     "model_found":1,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":3,
+    "human_only":2,
     "model_only":1,
     "precision":0.0,
     "recall":0.0
@@ -947,6 +903,28 @@
   },
   {
     "key":"P_EXPRESS_OBSCENE",
+    "human_found":0,
+    "model_found":1,
+    "agreement_found":0,
+    "analysis_version":"v1",
+    "human_only":0,
+    "model_only":1,
+    "precision":0.0,
+    "recall":null
+  },
+  {
+    "key":"P_MISINFO_GOVCRITIC",
+    "human_found":0,
+    "model_found":1,
+    "agreement_found":0,
+    "analysis_version":"v1",
+    "human_only":0,
+    "model_only":1,
+    "precision":0.0,
+    "recall":null
+  },
+  {
+    "key":"P_MISINFO_HEALTHOFF",
     "human_found":0,
     "model_found":1,
     "agreement_found":0,
@@ -1101,14 +1079,14 @@
   },
   {
     "key":"C_DISINFO_GOVAFFAIRS",
-    "human_found":2,
+    "human_found":0,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":2,
+    "human_only":0,
     "model_only":0,
     "precision":null,
-    "recall":0.0
+    "recall":null
   },
   {
     "key":"C_DISINFO_GOVAFFAIRS_CRISIS",
@@ -1574,11 +1552,11 @@
   },
   {
     "key":"C_DISINFO_REPUTATION",
-    "human_found":8,
+    "human_found":6,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":8,
+    "human_only":6,
     "model_only":0,
     "precision":null,
     "recall":0.0
@@ -1728,14 +1706,14 @@
   },
   {
     "key":"C_EXPRESS_ECON",
-    "human_found":2,
+    "human_found":0,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":2,
+    "human_only":0,
     "model_only":0,
     "precision":null,
-    "recall":0.0
+    "recall":null
   },
   {
     "key":"C_EXPRESS_ECON_CRISIS",
@@ -1794,11 +1772,11 @@
   },
   {
     "key":"C_EXPRESS_GOVAFFAIRS",
-    "human_found":3,
+    "human_found":1,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":3,
+    "human_only":1,
     "model_only":0,
     "precision":null,
     "recall":0.0
@@ -1959,11 +1937,11 @@
   },
   {
     "key":"C_EXPRESS_INFRA",
-    "human_found":3,
+    "human_found":1,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":3,
+    "human_only":1,
     "model_only":0,
     "precision":null,
     "recall":0.0
@@ -1992,11 +1970,11 @@
   },
   {
     "key":"C_EXPRESS_IR",
-    "human_found":4,
+    "human_found":2,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":4,
+    "human_only":2,
     "model_only":0,
     "precision":null,
     "recall":0.0
@@ -2069,11 +2047,11 @@
   },
   {
     "key":"C_EXPRESS_NATINT",
-    "human_found":3,
+    "human_found":1,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":3,
+    "human_only":1,
     "model_only":0,
     "precision":null,
     "recall":0.0
@@ -2146,14 +2124,14 @@
   },
   {
     "key":"C_EXPRESS_NATSEC_DIGI",
-    "human_found":2,
+    "human_found":0,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":2,
+    "human_only":0,
     "model_only":0,
     "precision":null,
-    "recall":0.0
+    "recall":null
   },
   {
     "key":"C_EXPRESS_NATSEC_GOVOFF",
@@ -2311,11 +2289,11 @@
   },
   {
     "key":"C_EXPRESS_RIGHTS",
-    "human_found":5,
+    "human_found":3,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":5,
+    "human_only":3,
     "model_only":0,
     "precision":null,
     "recall":0.0
@@ -2344,11 +2322,11 @@
   },
   {
     "key":"C_EXPRESS_STATEOP",
-    "human_found":3,
+    "human_found":1,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":3,
+    "human_only":1,
     "model_only":0,
     "precision":null,
     "recall":0.0
@@ -2377,11 +2355,11 @@
   },
   {
     "key":"C_EXPRESS_UNITY",
-    "human_found":4,
+    "human_found":3,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":4,
+    "human_only":3,
     "model_only":0,
     "precision":null,
     "recall":0.0
@@ -2465,14 +2443,14 @@
   },
   {
     "key":"C_MISINFO_ECON",
-    "human_found":2,
+    "human_found":0,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":2,
+    "human_only":0,
     "model_only":0,
     "precision":null,
-    "recall":0.0
+    "recall":null
   },
   {
     "key":"C_MISINFO_ECON_CRISIS",
@@ -3059,11 +3037,11 @@
   },
   {
     "key":"C_MISINFO_REPUTATION",
-    "human_found":4,
+    "human_found":2,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":4,
+    "human_only":2,
     "model_only":0,
     "precision":null,
     "recall":0.0
@@ -4291,6 +4269,17 @@
   },
   {
     "key":"I_EXPRESS_GOVAFFAIRS_DIGI",
+    "human_found":0,
+    "model_found":0,
+    "agreement_found":0,
+    "analysis_version":"v1",
+    "human_only":0,
+    "model_only":0,
+    "precision":null,
+    "recall":null
+  },
+  {
+    "key":"I_EXPRESS_GOVCRITIC",
     "human_found":0,
     "model_found":0,
     "agreement_found":0,
@@ -5886,14 +5875,14 @@
   },
   {
     "key":"P_DISINFO_GOVCRITIC",
-    "human_found":1,
+    "human_found":0,
     "model_found":0,
     "agreement_found":0,
     "analysis_version":"v1",
-    "human_only":1,
+    "human_only":0,
     "model_only":0,
     "precision":null,
-    "recall":0.0
+    "recall":null
   },
   {
     "key":"P_DISINFO_GOVCRITIC_CRISIS",
@@ -6216,6 +6205,17 @@
   },
   {
     "key":"P_DISINFO_NATREP_DIGI",
+    "human_found":0,
+    "model_found":0,
+    "agreement_found":0,
+    "analysis_version":"v1",
+    "human_only":0,
+    "model_only":0,
+    "precision":null,
+    "recall":null
+  },
+  {
+    "key":"P_DISINFO_NATSEC",
     "human_found":0,
     "model_found":0,
     "agreement_found":0,
