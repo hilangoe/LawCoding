@@ -1,0 +1,131 @@
+,category,law_id,law_length,key_count_json,pdf_missing,key_count_training,loss
+0,emergency,(Algeria 2020)_02,114638,9,False,0,9
+1,pcc_code,(Algeria 2001)_01,95194,31,False,12,19
+2,cybersecurity,(Thailand 2016)_01,0,0,True,0,0
+3,emergency,(South Africa 2021)_01,4066,0,False,0,0
+4,pcc_code,(Algeria 2014)_01,117663,33,False,5,28
+5,cybersecurity,(Azerbaijan 1998)_01,48634,9,False,8,1
+6,cybersecurity,(Malawi 2017)_02,137308,7,False,7,0
+7,cybersecurity,(Myanmar 2021)_01,8779,4,False,4,0
+8,emergency,(Philippines 2020)_02,32250,1,False,0,1
+9,emergency,(Botswana 2020)_02,3493,0,False,0,0
+10,cybersecurity,(Côte d_Ivoire 2013)_01,47094,10,False,3,7
+11,pcc_code,(Rwanda 2018)_02,723305,6,False,6,0
+12,cybersecurity,(Venezuela 2001)_01,20597,2,False,2,0
+13,cybersecurity,(Oman 2011)_01,26395,10,False,10,0
+14,emergency,(Lesotho 2020)_01,4330,1,False,0,1
+15,press,(Poland 1992)_01,218672,20,False,19,1
+16,general,(Poland 2016)_01,5498,0,False,0,0
+17,pcc_code,(El Salvador 1997)_01,297545,9,False,9,0
+18,press,(Uganda 2013)_01,87950,0,False,0,0
+19,general,(Venezuela 2012)_01,86901,7,False,6,1
+20,cybersecurity,(Vietnam 2018)_01,74935,16,False,6,10
+21,cybersecurity,(El Salvador 2024)_02,73865,5,False,5,0
+22,pcc_code,(Malawi 1930)_01,328506,6,False,6,0
+23,general,(Australia 2018)_02,150219,2,False,1,1
+24,emergency,(Taiwan 2020)_01,7,1,False,0,1
+25,pcc_code,(El Salvador 2022)_01,9467,2,False,2,0
+26,general,(Ethiopia 2019)_01,273681,8,False,8,0
+27,pcc_code,(Algeria 2020)_01,16697,36,False,15,21
+28,general,(Venezuela 2017)_01,20823,21,False,20,1
+29,press,(Malaysia 1998)_01,224492,15,False,15,0
+30,emergency,(Lesotho 2021)_01,70,1,False,0,1
+31,press,(Fiji 2022)_01,2625,1,False,1,0
+32,general,(Poland 2011)_01,279848,4,False,4,0
+33,emergency,(Botswana 2020)_03,7220,0,False,0,0
+34,press,(Laos 2008)_01,54061,13,False,13,0
+35,digital_age,(Tanzania 2018)_01,24282,12,False,12,0
+36,cybersecurity,(Rwanda 2018)_01,144841,7,False,7,0
+37,digital_age,(EU 2022)_01,433742,18,False,11,7
+38,press,(Guyana 2011)_01,62490,7,False,7,0
+39,general,(Fiji 2016)_01,8073,0,False,0,0
+40,pcc_code,(Algeria 1969)_01,52759,26,False,7,19
+41,emergency,(Malaysia 2021)_01,47909,3,False,0,3
+42,cybersecurity,(Bangladesh 2018)_01,55731,9,False,9,0
+43,press,(Uruguay 2014)_01,202571,9,False,9,0
+44,emergency,(Botswana 2020)_04,29413,2,False,0,2
+45,general,(Kenya 2016)_01,32499,1,False,1,0
+46,emergency,(Namibia 2020)_01,40333,2,False,2,0
+47,cybersecurity,(Zambia 2025)_02,81096,9,False,8,1
+48,general,(El Salvador 2011)_01,94416,3,False,3,0
+49,pcc_code,(Algeria 2024)_01,55433,38,False,18,20
+50,pcc_code,(Cameroon 2016)_01,138,9,False,0,9
+51,general,(Canada 2018)_01,2019173,1,False,1,0
+52,digital_age,(Singapore 2019)_01,111723,14,False,14,0
+53,pcc_code,(OEA 1948)_01,12192,0,False,0,0
+54,emergency,(Cambodia 2020)_01,6526,4,False,0,4
+55,pcc_code,(African Union 2002)_01,12442,2,False,1,1
+56,digital_age,(Chad 2014)_01,86059,5,False,4,1
+57,general,(Philippines 2020)_01,38650,10,False,10,0
+58,cybersecurity,(Guyana 2018)_01,3605,6,False,0,6
+59,press,(Haiti 1977)_01,61866,25,False,22,3
+60,general,(El Salvador 2010)_01,25127,2,False,2,0
+61,press,(Somalia 2007)_01,31457,7,False,7,0
+62,emergency,(Eswatini 2020)_01,33217,5,False,0,5
+63,cybersecurity,(Uganda 2019)_01,31,0,False,0,0
+64,cybersecurity,(Bangladesh 2023)_01,55864,13,False,13,0
+65,pcc_code,(Bolivia 1995)_01,0,6,True,0,6
+66,emergency,(South Africa 2020)_01,85666,4,False,0,4
+67,cybersecurity,(Bangladesh 2006)_01,74757,2,False,2,0
+68,pcc_code,(Guyana 1894)_01,282899,4,False,4,0
+69,general,(Honduras 1958)_01,15408,11,False,11,0
+70,general,(Poland 2008)_01,40468,0,False,0,0
+71,press,(Uruguay 2009)_01,30943,23,False,13,10
+72,press,(Uruguay 2024)_01,90894,6,False,6,0
+73,press,(Gambia 2009)_01,0,7,True,0,7
+74,pcc_code,(El Salvador 1983)_01,6883,5,False,5,0
+75,general,(France 2018)_01,23562,3,False,2,1
+76,pcc_code,(El Salvador 2023)_01,4544,2,False,2,0
+77,cybersecurity,(Venezuela 2024)_01,10696,2,False,2,0
+78,press,(Malta 2018)_01,91812,5,False,5,0
+79,general,(Ethiopia 2020)_01,13034,4,False,4,0
+80,pcc_code,(ASEAN 2012)_01,33475,3,False,3,0
+81,pcc_code,(Algeria 1975)_01,105362,23,False,12,11
+82,pcc_code,(Algeria 1966)_01,246995,26,False,24,2
+83,pcc_code,(Nepal 2017)_01,529179,0,False,0,0
+84,general,(Venezuela 2024)_02,33789,7,False,7,0
+85,press,(El Salvador 1950)_01,9370,3,False,3,0
+86,cybersecurity,(Nicaragua 2024)_01,12576,30,False,1,29
+87,emergency,(Malawi 1960)_01,39753,5,False,5,0
+88,cybersecurity,(Nigeria 2015)_01,58814,12,False,12,0
+89,pcc_code,(Algeria 2011)_01,117893,33,False,4,29
+90,general,(United States 2016)_01,13887,2,False,2,0
+91,press,(Kosovo 2012)_01,56544,4,False,4,0
+92,general,(Kosovo 2006)_01,19548,6,False,4,2
+93,pcc_code,(OEA 2000)_01,8887,0,False,0,0
+94,pcc_code,(Philippines 1930)_01,274433,7,False,7,0
+95,emergency,(Lesotho 2020)_02,21479,0,False,0,0
+96,general,(El Salvador 2025)_01,24840,7,False,7,0
+97,pcc_code,(Algeria 1982)_02,193378,24,False,19,5
+98,cybersecurity,(El Salvador 2016)_01,33053,2,False,2,0
+99,press,(Poland 2016)_02,0,1,True,0,1
+100,general,(Australia 2018)_01,137525,0,False,0,0
+101,press,(Kosovo 2005)_01,50479,7,False,7,0
+102,emergency,(Sri Lanka 2022)_01,12139,0,False,0,0
+103,press,(Venezuela 1995)_01,5,7,False,0,7
+104,cybersecurity,(Myanmar 2004)_01,25503,2,False,2,0
+105,press,(Nigeria 2016)_01,193872,6,False,6,0
+106,general,(Uganda 2020)_01,6,5,False,0,5
+107,general,(El Salvador 2006)_01,55884,4,False,3,1
+108,press,(Malta 1974)_01,35583,4,False,4,0
+109,cybersecurity,(Uganda 2022)_01,6713,4,False,4,0
+110,pcc_code,(Algeria 2016)_01,113340,34,False,3,31
+111,pcc_code,(Kosovo 2019)_01,502050,0,False,0,0
+112,press,(Malaysia 2025)_01,68071,7,False,7,0
+113,digital_age,(Poland 2024)_01,831106,12,False,12,0
+114,cybersecurity,(Zambia 2021)_01,88919,20,False,20,0
+115,pcc_code,(The Gambia 2013)_01,141,15,False,0,15
+116,press,(Myanmar 2013)_01,36458,8,False,7,1
+117,pcc_code,(Philippines 2017)_01,86121,5,False,5,0
+118,pcc_code,(Kazakhstan 2014)_01,740677,7,False,7,0
+119,pcc_code,(Poland 1997)_01,242087,18,False,17,1
+120,press,(Nigeria 1992)_01,24693,6,False,4,2
+121,press,(Fiji 2010)_01,36,17,False,0,17
+122,pcc_code,(Zambia 1931)_01,409951,23,False,23,0
+123,general,(Hungary 2023)_01,43860,2,False,2,0
+124,digital_age,(Turkey 2020)_01,58339,7,False,7,0
+125,pcc_code,(Venezuela 2005)_01,38287,25,False,13,12
+126,emergency,(Botswana 2020)_01,6437,0,False,0,0
+127,press,(Uruguay 1989)_01,30943,17,False,17,0
+128,press,(Gabon 2016)_01,74201,14,False,8,6
+129,digital_age,(United States 1996)_01,0,1,True,0,1

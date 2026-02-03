@@ -23,7 +23,7 @@ law_list = (
       .tolist()
 )
 
-#print(len(law_list))
+print(len(law_list))
 
 # setting up dataframe for importing features
 df["law_id"] = df["path"].apply(lambda p: Path(p).stem)
@@ -119,6 +119,14 @@ mean_loss_by_pdf = (
     .groupby("pdf_missing")["loss"]
     .mean()
 )
+
+total_json_rows = df_merged["key_count_json"].sum()
+
+print(f"Total JSON rows: {total_json_rows}")
+
+total_training_rows = df_merged["key_count_training"].sum()
+
+print(f"Total training rows: {total_training_rows}")
 
 print("\nMean loss by PDF availability:")
 for pdf_missing, mean_loss in mean_loss_by_pdf.items():

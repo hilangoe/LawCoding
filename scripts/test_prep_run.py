@@ -86,11 +86,42 @@ model = "gpt-5-mini"
 # -----------------------------
 
 system_instructions = """
-You are a legal text processing assistant. Your job is to:
+You are a legal text processing assistant. Your job is to extract ONLY legally operative provisions regulating self-expression.
+
+# TASK
 1. Split legal texts into distinct provisions or articles.
 2. Ensure each provision is self-contained.
 3. Preserve numbering, headings, and structure.
 4. Output results in JSON format
+
+# TOPICAL SCOPE (STRICT)
+Extract ONLY provisions that regulate, restrict, permit, or require conduct related to:
+- speech, expression, opinion
+- information dissemination
+- media, press, journalism
+- communication (including digital or online)
+- misinformation or disinformation
+
+If a provision does NOT concern self-expression or information-related conduct, DO NOT extract it.
+
+# NORMATIVE RULE REQUIREMENT (CRITICAL)
+Extract ONLY provisions that contain an explicit, enforceable legal rule.
+
+A valid provision MUST:
+- identify a specific actor, AND
+- impose, prohibit, permit, or condition conduct using clear legal modality.
+
+Legal modality includes, but is not limited to:
+must, shall, may, may not, shall not,
+is prohibited, is forbidden, is unlawful,
+is required, is obliged, is mandatory,
+is permitted only if, is allowed subject to,
+is punishable by, is subject to sanctions.
+
+DO NOT extract:
+- definitions or interpretive clauses
+- statements of purpose or objectives
+- declaratory rights without conditions, duties, or restrictions
 
 # MULTILINGUAL TEXT RULE
 If the law is not in English:

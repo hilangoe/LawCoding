@@ -281,3 +281,127 @@ openai.APITimeoutError: Request timed out.
 2026-01-22 14:34:38,608 | INFO | Stage 1 complete. Total provisions extracted: 6006
 2026-01-22 14:34:39,012 | INFO | Stage 1: 30 laws processed, 6006 provisions extracted
 2026-01-22 14:34:39,012 | INFO | Saved provisions to: /Users/hans-ingelang/Dropbox/Projects/LawCoding/data/test_provisions.jsonl
+2026-02-03 12:53:01,862 | INFO | --- Processing law: (Chile 2001)_01 ---
+2026-02-03 12:56:02,826 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 12:56:03,328 | INFO | Law (Chile 2001)_01 processed: 108 provisions extracted
+2026-02-03 12:56:03,328 | INFO | --- Processing law: (Hungary 2012)_01 ---
+2026-02-03 12:56:03,713 | WARNING | Law (Hungary 2012)_01: No provisions extracted from Stage 1.
+2026-02-03 12:56:03,713 | INFO | --- Processing law: (Malawi 2023)_01 ---
+2026-02-03 12:57:13,068 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 12:57:13,081 | INFO | Law (Malawi 2023)_01 processed: 17 provisions extracted
+2026-02-03 12:57:13,082 | INFO | --- Processing law: (Sierra Leone 2021)_01 ---
+2026-02-03 13:01:21,405 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:01:54,057 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:01:54,066 | INFO | Law (Sierra Leone 2021)_01 processed: 134 provisions extracted
+2026-02-03 13:01:54,067 | INFO | --- Processing law: (Tajikistan 2021)_01 ---
+2026-02-03 13:02:07,780 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:02:07,790 | WARNING | Law (Tajikistan 2021)_01: No provisions extracted from Stage 1.
+2026-02-03 13:02:07,791 | INFO | --- Processing law: (Hungary 2021)_01 ---
+2026-02-03 13:05:17,808 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:05:17,818 | INFO | Law (Hungary 2021)_01 processed: 33 provisions extracted
+2026-02-03 13:05:17,819 | INFO | --- Processing law: (Hungary 2020)_01 ---
+2026-02-03 13:06:12,982 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:06:12,989 | INFO | Law (Hungary 2020)_01 processed: 5 provisions extracted
+2026-02-03 13:06:12,990 | INFO | --- Processing law: (Venezuela 2000)_02 ---
+2026-02-03 13:08:44,056 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:11:45,399 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:11:45,453 | INFO | Law (Venezuela 2000)_02 processed: 109 provisions extracted
+2026-02-03 13:11:45,455 | INFO | --- Processing law: (African Union 1981)_01 ---
+2026-02-03 13:12:55,952 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:12:55,957 | INFO | Law (African Union 1981)_01 processed: 20 provisions extracted
+2026-02-03 13:12:55,958 | INFO | --- Processing law: (Pakistan 2020)_01 ---
+2026-02-03 13:14:30,988 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:14:30,998 | INFO | Law (Pakistan 2020)_01 processed: 43 provisions extracted
+2026-02-03 13:14:30,998 | INFO | --- Processing law: (Bhutan 2008)_01 ---
+2026-02-03 13:16:15,234 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:17:41,435 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:18:45,476 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:18:45,484 | INFO | Law (Bhutan 2008)_01 processed: 128 provisions extracted
+2026-02-03 13:18:45,484 | INFO | --- Processing law: (Laos 2014)_01 ---
+2026-02-03 13:20:05,496 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:20:05,507 | INFO | Law (Laos 2014)_01 processed: 52 provisions extracted
+2026-02-03 13:20:05,508 | INFO | --- Processing law: (Venezuela 2000)_01 ---
+2026-02-03 13:21:20,591 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:23:15,424 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:24:48,873 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:24:48,885 | INFO | Law (Venezuela 2000)_01 processed: 110 provisions extracted
+2026-02-03 13:24:48,886 | INFO | --- Processing law: (Zambia 2025)_01 ---
+2026-02-03 13:26:49,974 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:26:49,984 | INFO | Law (Zambia 2025)_01 processed: 70 provisions extracted
+2026-02-03 13:26:49,985 | INFO | --- Processing law: (Poland 2004)_01 ---
+2026-02-03 13:26:49,986 | WARNING | (Poland 2004)_01 - No PDF found, skipping.
+2026-02-03 13:26:49,986 | INFO | --- Processing law: (Hungary 2011)_01 ---
+2026-02-03 13:28:17,294 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:29:27,908 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:29:27,916 | INFO | Law (Hungary 2011)_01 processed: 30 provisions extracted
+2026-02-03 13:29:27,916 | INFO | --- Processing law: (Algeria 2006)_01 ---
+2026-02-03 13:31:27,430 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:32:03,794 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:32:03,806 | INFO | Law (Algeria 2006)_01 processed: 22 provisions extracted
+2026-02-03 13:32:03,806 | INFO | --- Processing law: (Thailand 2007)_01 ---
+2026-02-03 13:34:19,874 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:34:19,901 | INFO | Law (Thailand 2007)_01 processed: 41 provisions extracted
+2026-02-03 13:34:19,918 | INFO | --- Processing law: (Nicaragua 2020)_01 ---
+2026-02-03 13:35:59,898 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:35:59,908 | INFO | Law (Nicaragua 2020)_01 processed: 43 provisions extracted
+2026-02-03 13:35:59,908 | INFO | --- Processing law: (Zimbabwe 2020)_01 ---
+2026-02-03 13:37:28,575 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:37:28,588 | INFO | Law (Zimbabwe 2020)_01 processed: 11 provisions extracted
+2026-02-03 13:37:28,588 | INFO | --- Processing law: (Guyana 1959)_01 ---
+2026-02-03 13:37:31,649 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 400 Bad Request"
+2026-02-03 13:37:31,655 | ERROR | Chunk 1 failed: Error code: 400 - {'error': {'message': 'The response was filtered due to the prompt triggering Azure OpenAI’s content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'content_filter', 'content_filters': [{'blocked': True, 'source_type': 'prompt', 'content_filter_raw': None, 'content_filter_results': {'violence': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': False, 'severity': 'safe'}, 'jailbreak': {'filtered': True, 'detected': True}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'hate': {'filtered': False, 'severity': 'safe'}}, 'content_filter_offsets': {'start_offset': 40, 'end_offset': 1079, 'check_offset': 0}}]}}
+Traceback (most recent call last):
+  File "/Users/hans-ingelang/Dropbox/Projects/LawCoding/scripts/test_prep_library.py", line 122, in split_law
+    response = client.responses.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/resources/responses/responses.py", line 866, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'The response was filtered due to the prompt triggering Azure OpenAI’s content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'content_filter', 'content_filters': [{'blocked': True, 'source_type': 'prompt', 'content_filter_raw': None, 'content_filter_results': {'violence': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': False, 'severity': 'safe'}, 'jailbreak': {'filtered': True, 'detected': True}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'hate': {'filtered': False, 'severity': 'safe'}}, 'content_filter_offsets': {'start_offset': 40, 'end_offset': 1079, 'check_offset': 0}}]}}
+2026-02-03 13:37:31,685 | WARNING | Law (Guyana 1959)_01: No provisions extracted from Stage 1.
+2026-02-03 13:37:31,685 | INFO | --- Processing law: (El Salvador 1997)_02 ---
+2026-02-03 13:40:06,924 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:42:31,793 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:43:59,747 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:43:59,752 | INFO | Law (El Salvador 1997)_02 processed: 168 provisions extracted
+2026-02-03 13:43:59,753 | INFO | --- Processing law: (Algeria 1995)_01 ---
+2026-02-03 13:45:21,466 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:45:21,479 | INFO | Law (Algeria 1995)_01 processed: 4 provisions extracted
+2026-02-03 13:45:21,480 | INFO | --- Processing law: (El Salvador 2024)_01 ---
+2026-02-03 13:48:03,416 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:48:03,456 | INFO | Law (El Salvador 2024)_01 processed: 80 provisions extracted
+2026-02-03 13:48:03,456 | INFO | --- Processing law: (Bolivia 2010)_01 ---
+2026-02-03 13:50:46,451 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:52:12,980 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:54:06,050 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:55:39,076 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:57:00,751 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:58:23,213 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:58:23,231 | INFO | Law (Bolivia 2010)_01 processed: 100 provisions extracted
+2026-02-03 13:58:23,241 | INFO | --- Processing law: (Guyana 1997)_01 ---
+2026-02-03 13:59:39,652 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 13:59:39,673 | INFO | Law (Guyana 1997)_01 processed: 10 provisions extracted
+2026-02-03 13:59:39,673 | INFO | --- Processing law: (South Sudan 2013)_01 ---
+2026-02-03 13:59:39,918 | WARNING | Law (South Sudan 2013)_01: No provisions extracted from Stage 1.
+2026-02-03 13:59:39,922 | INFO | --- Processing law: (Malawi 2017)_01 ---
+2026-02-03 14:02:30,199 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 14:05:40,227 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 14:08:15,327 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 14:08:15,349 | INFO | Law (Malawi 2017)_01 processed: 350 provisions extracted
+2026-02-03 14:08:15,349 | INFO | --- Processing law: (Kenya 2018)_01 ---
+2026-02-03 14:10:44,268 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 14:10:44,320 | INFO | Law (Kenya 2018)_01 processed: 85 provisions extracted
+2026-02-03 14:10:44,320 | INFO | --- Processing law: (Angola 2020)_01 ---
+2026-02-03 14:12:23,694 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 14:15:23,703 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 14:18:07,602 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 14:20:02,027 | INFO | HTTP Request: POST https://hans-ai-foundry.openai.azure.com/openai/v1/responses "HTTP/1.1 200 OK"
+2026-02-03 14:20:02,038 | INFO | Law (Angola 2020)_01 processed: 78 provisions extracted
+2026-02-03 14:20:02,038 | INFO | Stage 1 complete. Total provisions extracted: 1851
+2026-02-03 14:20:02,113 | INFO | Stage 1: 30 laws processed, 1851 provisions extracted
+2026-02-03 14:20:02,113 | INFO | Saved provisions to: /Users/hans-ingelang/Dropbox/Projects/LawCoding/data/test_provisions.jsonl
