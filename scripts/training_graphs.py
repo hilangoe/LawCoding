@@ -5,7 +5,11 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+import morethemes as mt
 from collections import defaultdict
+
+## setting theme
+mt.set_theme("lighter")
 
 # -----------------------------
 # Paths
@@ -116,18 +120,25 @@ print(f"Per-provision plot saved to {OUTPUT_DIR / 'provision_distribution_traini
 # -----------------------------
 # Plot 2: per-law distribution
 # -----------------------------
-plt.figure(figsize=(8,5))
-sns.histplot(
+plt.figure(figsize=(8, 4))  # match Plot 1 exactly
+
+bins = range(0, max(law_counts) + 2)  # integer bins
+
+plt.hist(
     law_counts,
-    bins=range(0, max(law_counts)+2),  # one bin per integer
-    color="salmon",
-    edgecolor="black"
+    bins=bins,
+    align="left",
+    rwidth=0.9
 )
+
 plt.xlabel("Number of provisions")
 plt.ylabel("Number of laws")
 plt.title("Distribution of real samples per law (training set)")
-# plt.xticks(range(0, max(law_counts)+1))
+
+plt.xticks(bins[:-1])  # optional: force integer ticks
 plt.tight_layout()
+
 plt.savefig(OUTPUT_DIR / "law_distribution_training.png", dpi=300)
 plt.close()
+
 print(f"Per-law plot saved to {OUTPUT_DIR / 'law_distribution_training.png'}")

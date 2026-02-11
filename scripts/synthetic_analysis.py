@@ -5,6 +5,10 @@ import seaborn as sns
 import json
 import numpy as np
 from scipy.stats import linregress
+import morethemes as mt
+
+## setting theme
+mt.set_theme("lighter")
 
 # loading the per-provision metrics dataset from v2 of inference pipeline
 metrics_path = "../data/analysis/key_frequency_agreement_v2.csv"
@@ -55,39 +59,55 @@ metrics = ['f1', 'precision', 'recall']
 
 
 for metric in metrics:
+    # -----------------------------
     # Prepare data
+    # -----------------------------
     plot_df_metric = df_merged[['prop_synth', metric]].dropna()
 
-    # Linear regression for p-value
-    res = linregress(plot_df_metric['prop_synth'], plot_df_metric[metric])
+    x = plot_df_metric['prop_synth'].values
+    y = plot_df_metric[metric].values
+
+    # Linear regression
+    res = linregress(x, y)
     pvalue = res.pvalue
     print(f"{metric.upper()} vs prop_synth p-value: {pvalue:.3g}")
 
-    # Create plot
-    plt.figure(figsize=(7,5))
-    ax = sns.regplot(
-        data=plot_df_metric,
-        x="prop_synth",
-        y=metric,
-        ci=95,
-        scatter_kws={"alpha":0.7},
-        line_kws={"color":"red", "linewidth":2}
+    # -----------------------------
+    # Create plot (matplotlib only)
+    # -----------------------------
+    plt.figure(figsize=(8, 4))  # align with other plots
+
+    # Scatter
+    plt.scatter(
+        x,
+        y,
+        alpha=0.7
     )
 
-    # Annotate p-value
+    # Regression line
+    x_line = np.linspace(x.min(), x.max(), 100)
+    y_line = res.intercept + res.slope * x_line
+    plt.plot(
+        x_line,
+        y_line,
+        color="black",
+        linewidth=2
+    )
+
+    # P-value annotation (axes-relative, theme-safe)
     plt.text(
         0.05, 0.95,
         f"p = {pvalue:.3g}",
-        transform=ax.transAxes,
-        verticalalignment='top'
+        transform=plt.gca().transAxes,
+        verticalalignment="top"
     )
 
+    # Labels and title
     plt.xlabel("Proportion of synthetic training data")
-    plt.ylabel(metric.upper())
-    plt.title(f"{metric.upper()} vs proportion of synthetic data")
-    plt.tight_layout()
+    plt.ylabel(metric.title())
+    plt.title(f"{metric.title()} vs proportion of synthetic data")
 
-    # Save each figure
+    plt.tight_layout()
     plt.savefig(f"../outputs/synth_{metric}_scatter.png", dpi=300)
     plt.close()
 
