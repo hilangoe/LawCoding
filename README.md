@@ -56,3 +56,5 @@ LawCoding/
 ```
 
 Because some parts require significant computing power, we split the pipeline into local and cloud parts. The code for fine-tuning and inference can be found under the "azureml" folder.
+
+In order to run the first part of the pipeline (reconstructing and processing the training data), run `training_prep_run.py`. This run script pulls in relevant modules from `training_prep_library.py` and outputs `training_data.jsonl` in the data folder (raw data not available on the public repo). To run the fine-tuning job on Azure, submit the `job.yaml` found in the parent directory, replacing the computing instance name. `test_prep_run.py` performs the text splitting and filtering on the test data, while `job_infer.yaml` should be used to execute the inference job on Azure, resulting in `test_predictions.jsonl`. Lastly, `test_merge.py` processes the predictions and merges them with the human-generated labels for analysis.
